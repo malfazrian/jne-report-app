@@ -62,6 +62,18 @@ def main():
     exclude_statuses=["SUCCESS", "RETURN SHIPPER", "DELIVERED"],
     )
 
+    print("Mengekstrak Open AWB Smartfren...")
+    extract_open_awb(
+    input_path=r"D:\RYAN\3. Reports\Smartfren",
+    output_path=r"c:/Users/DELL/Desktop/ReportApp/data/Open AWB Smartfren.csv",
+    file_type="excel",
+    status_column="STATUS_POD",
+    awb_column="AWB",
+    exclude_statuses=["SUCCESS", "RETURN SHIPPER", "DELIVERED"],
+    quote_awb=True,
+    process_all_sheets=True
+    )
+
     print("Semua proses selesai.")
 
 if __name__ == "__main__":

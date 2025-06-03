@@ -5,11 +5,13 @@ import pandas as pd
 def extract_open_awb(
     input_path,
     output_path,
-    file_type="csv",                     # "csv" or "excel"
+    file_type="csv",                # "csv" or "excel"
     status_column="STATUS_POD",
     awb_column="AWB",
-    exclude_statuses=None,              # e.g. ["SUCCESS", "RETURN SHIPPER", "DELIVERED"]
-    header_row=0
+    exclude_statuses=None,          # e.g. ["SUCCESS", "RETURN SHIPPER", "DELIVERED"]
+    header_row=0,
+    quote_awb=False,                # untuk kasih tanda kutip di depan AWB
+    process_all_sheets=False        # untuk baca semua sheet dalam file Excel
 ):
     exclude_statuses = exclude_statuses or ["SUCCESS", "RETURN SHIPPER"]
 
@@ -30,9 +32,16 @@ def extract_open_awb(
             file_list = glob.glob(os.path.join(input_path, "*.xlsx"))
             for file in file_list:
                 try:
-                    df = pd.read_excel(file, header=header_row, dtype=str)
-                    print(f"✅ Excel dibaca: {os.path.basename(file)}")
-                    awb_list.append(df)
+                    if process_all_sheets:
+                        xls = pd.ExcelFile(file)
+                        for sheet_name in xls.sheet_names:
+                            df = pd.read_excel(xls, sheet_name=sheet_name, header=header_row, dtype=str)
+                            print(f"✅ {os.path.basename(file)} - Sheet: {sheet_name} dibaca.")
+                            awb_list.append(df)
+                    else:
+                        df = pd.read_excel(file, header=header_row, dtype=str)
+                        print(f"✅ Excel dibaca: {os.path.basename(file)}")
+                        awb_list.append(df)
                 except Exception as e:
                     print(f"❌ Gagal membaca {file}: {e}")
         else:
@@ -52,6 +61,10 @@ def extract_open_awb(
 
         if combined:
             result_df = pd.concat(combined, ignore_index=True)
+
+            if quote_awb:
+                result_df[awb_column] = "'" + result_df[awb_column].astype(str)
+
             result_df.to_csv(output_path, index=False, header=False, encoding="utf-8-sig")
             print(f"\n✅ Open AWB disimpan di: {output_path}")
         else:
