@@ -2,6 +2,7 @@
 
 from workflows.backup_open_awb import backup_open_awb_files
 from workflows.extractors.open_awb_extractor import extract_open_awb
+from workflows.extractors.new_awb_extractor import extract_new_awb_smartfren
 from workflows.extractors.awb_rt_extractor import extract_rt_awb
 
 def main():
@@ -73,6 +74,14 @@ def main():
     quote_awb=True,
     process_all_sheets=True
     )
+
+    print("Mengekstrak New AWB Smartfren...")
+    extract_new_awb_smartfren(
+    base_folder=r"\\192.168.9.74\f\ALL REPORT\01. JANUARI 2024\ALL REPORT GABUNGAN",
+    archive_file=r"c:/Users/DELL/Desktop/ReportApp/data/Archive/New AWB Smartfren.csv",
+    output_file=r"c:/Users/DELL/Desktop/ReportApp/data/New AWB Smartfren.csv"
+    )
+
 
     print("Semua proses selesai.")
 
