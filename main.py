@@ -4,6 +4,7 @@ from workflows.backup_open_awb import backup_open_awb_files
 from workflows.extractors.open_awb_extractor import extract_open_awb
 from workflows.extractors.new_awb_extractor import extract_new_awb_smartfren
 from workflows.extractors.awb_rt_extractor import extract_rt_awb
+from core.file_ops import merge_csv_files
 
 def main():
     print("Memulai ReportApp..")
@@ -82,6 +83,12 @@ def main():
     output_file=r"c:/Users/DELL/Desktop/ReportApp/data/New AWB Smartfren.csv"
     )
 
+    print("Menggabungkan semua file CSV Open AWB...")
+    merge_csv_files(
+        input_folder="c:/Users/DELL/Desktop/ReportApp/data",
+        output_folder="c:/Users/DELL/Desktop/ReportApp/data",
+        filename_prefix="Update Ryan"
+    )
 
     print("Semua proses selesai.")
 
