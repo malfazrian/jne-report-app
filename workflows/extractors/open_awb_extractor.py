@@ -5,10 +5,10 @@ import pandas as pd
 def extract_open_awb(
     input_path,
     output_path,
-    file_type="csv",                     # "csv" atau "excel"
+    file_type="csv",                     # "csv" or "excel"
     status_column="STATUS_POD",
     awb_column="AWB",
-    exclude_statuses=None,              # list: ["SUCCESS", "RETURN SHIPPER", "DELIVERED"]
+    exclude_statuses=None,              # e.g. ["SUCCESS", "RETURN SHIPPER", "DELIVERED"]
     header_row=0
 ):
     exclude_statuses = exclude_statuses or ["SUCCESS", "RETURN SHIPPER"]
@@ -48,7 +48,7 @@ def extract_open_awb(
                 if not df_filtered.empty:
                     combined.append(df_filtered)
             else:
-                print(f"⚠️ Kolom {awb_column} dan {status_column} tidak ditemukan di salah satu file!")
+                print(f"⚠️ Kolom {awb_column} dan {status_column} tidak ditemukan!")
 
         if combined:
             result_df = pd.concat(combined, ignore_index=True)
