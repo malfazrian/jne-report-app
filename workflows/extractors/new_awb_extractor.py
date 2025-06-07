@@ -96,3 +96,12 @@ def extract_new_awb_smartfren(
 
     except Exception as e:
         print(f"Terjadi kesalahan: {e}")
+
+def run_new_awb_extraction(new_awb_tasks:list):
+    for task in new_awb_tasks:
+        print(f"Mengekstrak New AWB untuk {task['desc']}...")
+        extract_new_awb_smartfren(
+            base_folder=task["base_folder"],
+            archive_file=task["archive_file"],
+            output_file=task["output_file"]
+        )

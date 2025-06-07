@@ -75,3 +75,18 @@ def extract_open_awb(
 
     except Exception as e:
         print(f"Gagal mengekstrak open AWB: {e}")
+
+def run_open_awb_extraction(open_awb_tasks: list):
+    for task in open_awb_tasks:
+        print(f"Mengekstrak Open AWB untuk {task['desc']}...")
+        extract_open_awb(
+            input_path=task["input_path"],
+            output_path=task["output_path"],
+            file_type=task["file_type"],
+            status_column=task["status_column"],
+            awb_column=task["awb_column"],
+            exclude_statuses=task.get("exclude_statuses", []),
+            header_row=task.get("header_row", 0),
+            quote_awb=task.get("quote_awb", False),
+            process_all_sheets=task.get("process_all_sheets", False)
+        )

@@ -63,7 +63,19 @@ def merge_csv_files(
             result_df.to_csv(output_file, index=False, header=False)
 
             print(f"File hasil merge disimpan di:\n{output_file}")
-            return output_file
+            return os.path.basename(output_file)
         else:
             print("Tidak ada file CSV untuk digabungkan.")
-            return ""
+            return "Tidak ada file untuk digabungkan."
+
+def backup_open_awb_files():
+    """Backup file open AWB ke folder Archive dan bersihkan arsip sebelumnya."""
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.abspath(os.path.join(current_dir, "..", "data"))
+    archive_dir = os.path.join(data_dir, "archive")
+
+    ensure_folder(archive_dir)
+    clear_folder_of_csvs(archive_dir)
+    move_csvs_to_folder(data_dir, archive_dir)
+
+    print("Backup selesai.")

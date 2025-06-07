@@ -28,3 +28,9 @@ def extract_rt_awb(input_path, output_path):
 
     except Exception as e:
         print(f"Gagal mengekstrak RT AWB Danamon: {e}")
+
+def run_rt_awb_extraction(tasks: list):
+    for task in tasks:
+        print(f"Memproses RT AWB {task['desc']}...")
+        extract_rt_awb(task["input_path"], task["output_path"])
+        print(f"Proses {task['desc']} selesai.\n")
