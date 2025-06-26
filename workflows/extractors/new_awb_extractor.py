@@ -2,11 +2,13 @@ import pandas as pd
 import os
 import datetime
 
-def extract_new_awb_smartfren(
+def extract_new_awb(
+    desc,
     base_folder,
     archive_file,
     output_file,
-    group_name="DISTRIBUSI SENTRA JAYA"
+    group_name="DISTRIBUSI SENTRA JAYA",
+    tracker=None
 ):
     try:
         today = datetime.datetime.today()
@@ -18,24 +20,21 @@ def extract_new_awb_smartfren(
                 modified_timestamp = os.path.getmtime(archive_file)
                 start_date = datetime.datetime.fromtimestamp(modified_timestamp).replace(hour=0, minute=0)
                 print(f"Start date otomatis dari file sebelumnya: {start_date.strftime('%d-%m-%Y')}")
-            except:
+            except Exception as e:
                 use_manual_input = True
+                print(f"Gagal baca tanggal dari archive: {e}")
         else:
             print("File archive tidak ditemukan.")
             use_manual_input = True
 
+        end_date = today - datetime.timedelta(days=1)
         if use_manual_input:
-            start_date = today - datetime.timedelta(days=1)
-            end_date = today - datetime.timedelta(days=1)
-        else:
-            end_date = today - datetime.timedelta(days=1)
+            start_date = end_date
 
-        # Cegah start_date lebih baru dari end_date
         if start_date > end_date:
             print(f"Start date ({start_date.date()}) > end date ({end_date.date()}), disesuaikan.")
             start_date = end_date
 
-        # Siapkan path file
         tanggal_str = today.strftime("%d %m %y")
         bulan_inggris = end_date.strftime("%m. %b %y").upper()
 
@@ -55,18 +54,21 @@ def extract_new_awb_smartfren(
 
         file_path = next((p for p in file_paths if os.path.exists(p)), None)
         if not file_path:
-            print("File tidak ditemukan di kedua path:")
-            for path in file_paths:
-                print(f"Search {path}")
+            detail = f"File tidak ditemukan:\n- {file_paths[0]}\n- {file_paths[1]}"
+            print(detail)
+            if tracker:
+                tracker.set_preprocess(desc, False)
             return
 
-        # Baca file Excel
         df = pd.read_excel(file_path, sheet_name="All Gab Aduy", dtype=str)
         df.columns = df.columns.str.strip()
 
         required_columns = {"AWB", "TGL_ENTRY", "GROUP_CUST"}
         if not required_columns.issubset(df.columns):
-            print("Kolom yang dibutuhkan tidak lengkap dalam file.")
+            detail = f"Kolom wajib tidak lengkap: {required_columns}"
+            print(detail)
+            if tracker:
+                tracker.set_preprocess(desc, False)
             return
 
         df["GROUP_CUST"] = df["GROUP_CUST"].astype(str).str.strip().str.upper()
@@ -79,7 +81,6 @@ def extract_new_awb_smartfren(
 
         df["TGL_ENTRY"] = df["TGL_ENTRY"].dt.date
 
-        # Filter data berdasarkan tanggal & group
         df_filtered = df[
             (df["TGL_ENTRY"] >= start_date.date()) &
             (df["TGL_ENTRY"] <= end_date.date()) &
@@ -87,21 +88,31 @@ def extract_new_awb_smartfren(
         ][["AWB"]]
 
         if df_filtered.empty:
-            print("Tidak ada data yang memenuhi kriteria.")
+            detail = f"Tidak ada data memenuhi kriteria tanggal ({start_date.date()} - {end_date.date()}) dan group '{group_name}'."
+            print(detail)
+            if tracker:
+                tracker.set_preprocess(desc, False)
             return
 
         df_filtered["AWB"] = "'" + df_filtered["AWB"].astype(str)
         df_filtered.to_csv(output_file, index=False, header=False)
-        print(f"New AWB Smartfren berhasil disimpan: {output_file}")
+        print(f"New AWB {desc} berhasil disimpan: {output_file}")
+        if tracker:
+            tracker.set_preprocess(desc, True)
 
     except Exception as e:
-        print(f"Terjadi kesalahan: {e}")
+        detail = f"Terjadi kesalahan: {e}"
+        print(detail)
+        if tracker:
+            tracker.set_preprocess(desc, False)
 
-def run_new_awb_extraction(new_awb_tasks:list):
+def run_new_awb_extraction(new_awb_tasks: list, tracker=None):
     for task in new_awb_tasks:
         print(f"Mengekstrak New AWB untuk {task['desc']}...")
-        extract_new_awb_smartfren(
+        extract_new_awb(
+            desc=task["desc"],
             base_folder=task["base_folder"],
             archive_file=task["archive_file"],
-            output_file=task["output_file"]
+            output_file=task["output_file"],
+            tracker=tracker
         )

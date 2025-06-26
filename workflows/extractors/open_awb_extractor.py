@@ -1,6 +1,9 @@
 import os
 import glob
 import pandas as pd
+import warnings
+
+warnings.simplefilter(action='ignore', category=pd.errors.DtypeWarning)
 
 def extract_open_awb(
     input_path,
@@ -11,7 +14,9 @@ def extract_open_awb(
     exclude_statuses=None,          # e.g. ["SUCCESS", "RETURN SHIPPER", "DELIVERED"]
     header_row=0,
     quote_awb=False,                # untuk kasih tanda kutip di depan AWB
-    process_all_sheets=False        # untuk baca semua sheet dalam file Excel
+    process_all_sheets=False,       # untuk baca semua sheet dalam file Excel
+    task_name=None,
+    tracker=None
 ):
     exclude_statuses = exclude_statuses or ["SUCCESS", "RETURN SHIPPER"]
 
@@ -30,6 +35,12 @@ def extract_open_awb(
 
         elif file_type == "excel":
             file_list = glob.glob(os.path.join(input_path, "*.xlsx"))
+
+            if not file_list:
+                msg = f"Tidak ada file Excel ditemukan di folder: {input_path}"
+                print(msg)
+                return False
+
             for file in file_list:
                 try:
                     if process_all_sheets:
@@ -57,10 +68,13 @@ def extract_open_awb(
             if {awb_column, status_column}.issubset(df.columns):
                 df[status_column] = df[status_column].astype(str).str.strip().str.upper()
                 df_filtered = df[~df[status_column].isin([s.upper() for s in exclude_statuses])][[awb_column]]
+                df_filtered = df_filtered.dropna(subset=[awb_column])
                 if not df_filtered.empty:
                     combined.append(df_filtered)
             else:
-                print(f"Kolom {awb_column} dan {status_column} tidak ditemukan!")
+                msg = f"Kolom tidak ditemukan: dibutuhkan '{awb_column}' dan '{status_column}'"
+                print(msg)
+                return False
 
         if combined:
             result_df = pd.concat(combined, ignore_index=True)
@@ -70,15 +84,22 @@ def extract_open_awb(
 
             result_df.to_csv(output_path, index=False, header=False, encoding="utf-8-sig")
             print(f"Open AWB disimpan di: {output_path}")
+            if tracker and task_name:
+                tracker.set_preprocess(task_name, True)
+            return True
         else:
             print("Tidak ada data AWB yang valid ditemukan.")
+            return False
 
     except Exception as e:
         print(f"Gagal mengekstrak open AWB: {e}")
+        return False
 
-def run_open_awb_extraction(open_awb_tasks: list):
+
+def run_open_awb_extraction(open_awb_tasks: list, tracker=None):
     for task in open_awb_tasks:
-        print(f"Mengekstrak Open AWB untuk {task['desc']}...")
+        task_name = task["desc"]
+        print(f"Mengekstrak Open AWB untuk {task_name}...")
         extract_open_awb(
             input_path=task["input_path"],
             output_path=task["output_path"],
@@ -88,5 +109,7 @@ def run_open_awb_extraction(open_awb_tasks: list):
             exclude_statuses=task.get("exclude_statuses", []),
             header_row=task.get("header_row", 0),
             quote_awb=task.get("quote_awb", False),
-            process_all_sheets=task.get("process_all_sheets", False)
+            process_all_sheets=task.get("process_all_sheets", False),
+            tracker=tracker,
+            task_name=task_name
         )

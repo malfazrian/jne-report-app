@@ -1,6 +1,6 @@
 open_awb_tasks = [
     {
-            "desc": "Danamon",
+            "desc": "Open Danamon",
             "input_path": "D:/RYAN/3. Reports/Danamon/Raw Report.csv",
             "output_path": "c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv",
             "file_type": "csv",
@@ -9,7 +9,7 @@ open_awb_tasks = [
             "exclude_statuses": ["SUCCESS", "RETURN SHIPPER", "DELIVERED"],
         },
         {
-            "desc": "Generali",
+            "desc": "Open Generali",
             "input_path": "D:/RYAN/3. Reports/Generali",
             "output_path": "c:/Users/DELL/Desktop/ReportApp/data/Open AWB Generali.csv",
             "file_type": "excel",
@@ -19,7 +19,7 @@ open_awb_tasks = [
             "header_row": 2
         },
         {
-            "desc": "Kalog",
+            "desc": "Open Kalog",
             "input_path": "D:/RYAN/3. Reports/Kalog",
             "output_path": "c:/Users/DELL/Desktop/ReportApp/data/Open AWB Kalog.csv",
             "file_type": "excel",
@@ -28,7 +28,7 @@ open_awb_tasks = [
             "exclude_statuses": ["SUCCESS", "RETURN SHIPPER", "DELIVERED"]
         },
         {
-            "desc": "LSIN",
+            "desc": "Open LSIN",
             "input_path": r"D:\RYAN\3. Reports\LSIN",
             "output_path": r"c:/Users/DELL/Desktop/ReportApp/data/Open AWB LSIN.csv",
             "file_type": "excel",
@@ -37,7 +37,7 @@ open_awb_tasks = [
             "exclude_statuses": ["SUCCESS", "RETURN SHIPPER", "DELIVERED"]
         },
         {
-            "desc": "Smartfren",
+            "desc": "Open Smartfren",
             "input_path": r"D:\RYAN\3. Reports\Smartfren",
             "output_path": r"c:/Users/DELL/Desktop/ReportApp/data/Open AWB Smartfren.csv",
             "file_type": "excel",
@@ -51,7 +51,7 @@ open_awb_tasks = [
 
 new_awb_tasks = [
     {
-        "desc": "Smartfren",
+        "desc": "New Smartfren",
         "base_folder": r"\\192.168.9.74\f\ALL REPORT\01. JANUARI 2024\ALL REPORT GABUNGAN",
         "archive_file": r"c:/Users/DELL/Desktop/ReportApp/data/Archive/Open AWB Smartfren.csv",
         "output_file": r"c:/Users/DELL/Desktop/ReportApp/data/New AWB Smartfren.csv"
@@ -60,7 +60,7 @@ new_awb_tasks = [
 
 rt_awb_tasks = [
     {
-        "desc": "Danamon",
+        "desc": "RT Danamon",
         "input_path": "D:/RYAN/3. Reports/Danamon/Raw Report.csv",
         "output_path": "c:/Users/DELL/Desktop/ReportApp/data/RT AWB Danamon.csv"
     }
@@ -69,22 +69,22 @@ rt_awb_tasks = [
 list_customer_ids = [
     {
         "customer_id": "81635700",
-        "nama_customer": "Danamon",
+        "nama_customer": "New Danamon 00",
         "include_today": True,
     },
     {
         "customer_id": "81635701",
-        "nama_customer": "Danamon",
+        "nama_customer": "New Danamon 01",
         "include_today": True,
     },
     {
         "customer_id": "81728700",
-        "nama_customer": "Kalog",
+        "nama_customer": "New Kalog",
         "include_today": False,
     },
     {
         "customer_id": "81901200",
-        "nama_customer": "LSIN",
+        "nama_customer": "New LSIN",
         "include_today": False,
     },
 ]

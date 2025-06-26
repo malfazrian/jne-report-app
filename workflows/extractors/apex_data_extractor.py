@@ -5,8 +5,9 @@ from urllib.parse import unquote
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 from pathlib import Path
+from workflows.tracker import TaskTableTracker
 
 apex_hosts = ["10.18.2.35", "10.18.2.16", "10.18.2.12", "10.18.2.11"]
 username = "ccc.support4@jne.co.id"
@@ -21,6 +22,9 @@ def start_driver(download_dir: str):
         "safebrowsing.enabled": True
     }
     options.add_experimental_option("prefs", prefs)
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    options.add_argument("--log-level=3")
+    options.add_argument("--headless")
     return webdriver.Chrome(options=options)
 
 def login_to_apex(driver, url, username, password):
@@ -30,7 +34,7 @@ def login_to_apex(driver, url, username, password):
     driver.find_element(By.NAME, "p_t01").clear()
     driver.find_element(By.NAME, "p_t01").send_keys(username)
     driver.find_element(By.NAME, "p_t02").send_keys(password + Keys.RETURN)
-
+    time.sleep(2)
 
 def upload_file(driver, file_path: str, file_name: str):
     full_file_path = Path(file_path).joinpath(file_name).resolve()
@@ -46,36 +50,17 @@ def upload_file(driver, file_path: str, file_name: str):
     time.sleep(5)
     driver.refresh()
 
-def upload_all_csv_in_folder(driver, folder_path: str):
-    # Ambil semua file .csv di folder
-    csv_files = [f for f in os.listdir(folder_path) if f.endswith(".csv")]
-    
-    if not csv_files:
-        print("Tidak ada file .csv ditemukan di folder:", folder_path)
-        return
-
-    for csv_file in csv_files:
-        full_path = os.path.join(folder_path, csv_file)
-        try:
-            upload_file(driver, full_path, csv_file)
-        except Exception as e:
-            print(f"Gagal upload {csv_file}: {e}")
-
 def click_download_link(driver, file_prefix: str = None, customer_id: str = None, start_fmt: str = None, end_fmt: str = None):
     print("Menunggu link download siap (auto-refresh setiap 10 detik)...")
 
     if file_prefix:
         search_key = file_prefix
     elif customer_id and start_fmt and end_fmt:
-        partial_key = f"_{customer_id}_{start_fmt}_{end_fmt}_"
-        search_key = partial_key
+        search_key = f"_{customer_id}_{start_fmt}_{end_fmt}_"
     else:
         raise ValueError("Harus isi file_prefix ATAU customer_id + tanggal")
 
-    partial_key = f"_{customer_id}_{start_fmt}_{end_fmt}_" if customer_id else None
-
     while True:
-        # Clear search field
         search_field = driver.find_element(By.ID, "Status History SLA_search_field")
         search_field.clear()
         search_field.send_keys(search_key)
@@ -86,68 +71,60 @@ def click_download_link(driver, file_prefix: str = None, customer_id: str = None
         rows = driver.find_elements(By.CSS_SELECTOR, "table.a-IRR-table tbody tr")
         for row in rows:
             try:
-                filename_cell = row.find_element(By.XPATH, './td[@headers="FILENAME"]')
-                filename_text = filename_cell.text.strip()
+                filename_text = row.find_element(By.XPATH, './td[@headers="FILENAME"]').text.strip()
+                error_text = row.find_element(By.XPATH, './td[@headers="ERROR"]').text.strip()
 
-                if file_prefix and filename_text.startswith(file_prefix):
-                    matched = True
-                elif partial_key and partial_key in filename_text:
-                    matched = True
-                else:
-                    matched = False
+                matched = (file_prefix and filename_text.startswith(file_prefix)) or \
+                          (customer_id and f"_{customer_id}_{start_fmt}_{end_fmt}_" in filename_text)
 
                 if not matched:
                     continue
 
-                # Cek error
-                error_cell = row.find_element(By.XPATH, './td[@headers="ERROR"]')
-                error_text = error_cell.text.strip()
                 if error_text and error_text != "-":
-                    print(f"Gagal proses file: {error_text}")
-                    raise Exception(f"File error: {error_text}")
+                    if any(x in error_text for x in ["500", "502", "try again"]):
+                        raise Exception(f"Proses dihentikan karena error kritikal: {error_text}")
+                    if "No Data Found" in error_text:
+                        print(f"Tidak ada data untuk {customer_id}, lanjut akun berikutnya.")
+                        return None
 
-                # Klik link download
-                download_cell = row.find_element(By.XPATH, './td[@headers="DOWNLOAD"]')
-                link = download_cell.find_element(By.TAG_NAME, "a")
+                link = row.find_element(By.XPATH, './td[@headers="DOWNLOAD"]').find_element(By.TAG_NAME, "a")
                 href = link.get_attribute("href")
-
-                # Ekstrak nama file dari href, misal: REPCCC.GET_FILE?p_fn=Update Ryan 040625_6383809.csv
-                if "p_fn=" in href:
-                    actual_filename = unquote(href.split("p_fn=")[-1])
-                else:
-                    actual_filename = filename_text  # fallback
-
+                actual_filename = unquote(href.split("p_fn=")[-1]) if "p_fn=" in href else filename_text
                 link.click()
                 print(f"Tautan download diklik: {actual_filename}")
-
                 return actual_filename
 
-            except NoSuchElementException:
+            except (NoSuchElementException, StaleElementReferenceException):
                 continue
 
         time.sleep(10)
         driver.refresh()
 
-def wait_for_download(download_dir: str, base_file_name: str, timeout: int = 90, target_filename=None) -> str:
+def wait_for_download(download_dir: str, base_file_name: str, timeout: int = 90, target_filename=None, contains_text=None) -> str:
     print("Menunggu file selesai diunduh...")
     polling_interval = 2
     elapsed = 0
 
     while elapsed < timeout:
         for fname in os.listdir(download_dir):
-            if target_filename:
-                if fname != target_filename:
+            # Jika ada target_filename, tetap cek persis
+            if target_filename and fname == target_filename:
+                full_path = os.path.join(download_dir, fname)
+                if os.path.isfile(full_path) and os.path.getsize(full_path) > 0 and not os.path.exists(full_path + ".crdownload"):
+                    print(f"File berhasil diunduh: {full_path} ({os.path.getsize(full_path)} bytes)")
+                    return full_path
+            # Jika contains_text (misal customer_id), cek apakah ada di nama file
+            elif contains_text and contains_text in fname and fname.endswith(".csv") and not fname.endswith(".crdownload"):
+                full_path = os.path.join(download_dir, fname)
+                if os.path.isfile(full_path) and os.path.getsize(full_path) > 0 and not os.path.exists(full_path + ".crdownload"):
+                    print(f"File berhasil diunduh (by contains): {full_path} ({os.path.getsize(full_path)} bytes)")
+                    return full_path
+            # Fallback: cek nama file yang diawali base_file_name
+            elif not target_filename and not contains_text:
+                if not fname.startswith(base_file_name) or not fname.endswith(".csv") or fname.endswith(".crdownload"):
                     continue
-            else:
-                if not fname.startswith(base_file_name) or not fname.endswith(".csv"):
-                    continue
-                if fname.endswith(".crdownload"):
-                    continue
-
-            full_path = os.path.join(download_dir, fname)
-            if os.path.isfile(full_path) and os.path.getsize(full_path) > 0:
-                crdownload_path = full_path + ".crdownload"
-                if not os.path.exists(crdownload_path):
+                full_path = os.path.join(download_dir, fname)
+                if os.path.isfile(full_path) and os.path.getsize(full_path) > 0 and not os.path.exists(full_path + ".crdownload"):
                     print(f"File berhasil diunduh: {full_path} ({os.path.getsize(full_path)} bytes)")
                     return full_path
 
@@ -172,7 +149,6 @@ def fill_form_request(driver, customer_id: str, tanggal_awal: str, tanggal_akhir
                     driver.find_element(By.ID, "P45_NA").send_keys(Keys.ARROW_UP)
                     time.sleep(2)
             except NoSuchElementException:
-                print("Form belum muncul, mencoba shortcut + refresh...")
                 driver.find_element(By.ID, "P45_PARAM_TYPE").send_keys(Keys.ARROW_DOWN)
                 time.sleep(2)
                 if customer_id.startswith("8"):
@@ -191,14 +167,15 @@ def fill_form_request(driver, customer_id: str, tanggal_awal: str, tanggal_akhir
 
             isi_tanggal_awal_akhir(driver, tanggal_awal, tanggal_akhir)
             driver.find_element(By.ID, "B49858870221701936").click()
-            time.sleep(5)
-            driver.refresh()
+            print(f"Request berhasil untuk {customer_id} ({tanggal_awal} - {tanggal_akhir})")
             return
-        except Exception as e:
-            print(f"Percobaan ke-{attempt+1} gagal isi form: {e}")
+        except StaleElementReferenceException:
             time.sleep(2)
             driver.refresh()
-    raise Exception("Gagal mengisi form request data setelah 5 kali percobaan")
+        except Exception as e:
+            time.sleep(2)
+            driver.refresh()
+    raise Exception(f"Gagal mengisi form request data untuk {customer_id} ({tanggal_awal} - {tanggal_akhir}) setelah {retries} kali percobaan")
 
 def generate_date_ranges(tgl_awal_str: str, tgl_akhir_str: str, format: str = "%d-%b-%Y", max_range: int = 5):
     tgl_awal = datetime.strptime(tgl_awal_str, format)
@@ -207,42 +184,25 @@ def generate_date_ranges(tgl_awal_str: str, tgl_akhir_str: str, format: str = "%
 
     while tgl_awal <= tgl_akhir:
         tgl_end = min(tgl_awal + timedelta(days=max_range - 1), tgl_akhir)
-        ranges.append((
-            tgl_awal.strftime(format),
-            tgl_end.strftime(format)
-        ))
+        ranges.append((tgl_awal.strftime(format), tgl_end.strftime(format)))
         tgl_awal = tgl_end + timedelta(days=1)
 
     return ranges
 
 def get_tanggal_awal(file_referensi: str, format: str = "%d-%b-%Y"):
     fallback = datetime.today() - timedelta(days=1)
-    
+
     if os.path.exists(file_referensi):
         mtime = datetime.fromtimestamp(os.path.getmtime(file_referensi))
-
-        # Kalau file dimodifikasi hari ini atau lebih baru dari fallback, pakai fallback
         if mtime.date() >= fallback.date():
             return fallback.strftime(format)
-        
         return mtime.strftime(format)
 
     return fallback.strftime(format)
 
-def process_apex_upload_and_request(file_name, base_file_name, file_path, download_dir, list_customer_ids):
-    list_customer = [
-        {
-            "customer_id": cust["customer_id"],
-            "include_today": cust.get("include_today", False)
-        }
-        for cust in list_customer_ids
-    ]
-    archive_file = r"C:\Users\DELL\Desktop\ReportApp\data\Archive\Open AWB Smartfren.csv"
-
-    tanggal_awal = get_tanggal_awal(archive_file)
-    if not tanggal_awal:
-        print("Tidak dapat menentukan tanggal awal, menggunakan kemarin.")
-        tanggal_awal = (datetime.today() - timedelta(days=1)).strftime("%d-%b-%Y")
+def process_apex_upload_and_request(file_name, base_file_name, file_path, download_dir, list_customer_ids, tracker,
+    open_awb_tasks, new_awb_tasks, rt_awb_tasks):
+    tanggal_awal = get_tanggal_awal(r"C:/Users/DELL/Desktop/ReportApp/data/Archive/Open AWB Smartfren.csv")
     today_str = datetime.today().strftime("%d-%b-%Y")
     yesterday_str = (datetime.today() - timedelta(days=1)).strftime("%d-%b-%Y")
 
@@ -253,61 +213,80 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
 
         driver = start_driver(download_dir)
         request_info = []
+
         try:
-            login_to_apex(driver, apex_url_upload, username, password)
-            print(rf"{file_path} with {file_name} akan diunggah ke APEX...")
-            upload_file(driver, file_path, file_name)
+            # Cek apakah SEMUA task open_awb/new_awb/rt_awb sudah pernah download
+            all_done = True
+            for task in open_awb_tasks + new_awb_tasks + rt_awb_tasks:
+                tracker_row = next((row for row in tracker.rows if str(row["task"]) == str(task["desc"])), None)
+                if not tracker_row or not tracker_row.get("download"):
+                    all_done = False
+                    break
 
-            # klik tombol History
-            tombol_history = driver.find_element(By.ID, "B49871477158701971")
-            tombol_history.click()
-            time.sleep(2)
+            if all_done:
+                print("Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.")
+            else:
+                login_to_apex(driver, apex_url_upload, username, password)
+                upload_file(driver, file_path, file_name)
+                for task in open_awb_tasks + new_awb_tasks + rt_awb_tasks:
+                    tracker.set_request(task["desc"], True)
+                driver.find_element(By.ID, "B49871477158701971").click()
+                time.sleep(2)
 
-            downloaded_filename = click_download_link(driver, file_prefix=file_name)
-            downloaded_file = wait_for_download(download_dir, base_file_name, target_filename=downloaded_filename)
+                downloaded_filename = click_download_link(driver, file_prefix=file_name)
+                downloaded_open_file = wait_for_download(download_dir, base_file_name, target_filename=downloaded_filename)
 
-            if not downloaded_file:
-                print("File upload tidak berhasil, lanjut host berikutnya.")
-                driver.quit()
-                continue
+                if downloaded_open_file:
+                    for task in open_awb_tasks + new_awb_tasks + rt_awb_tasks:
+                        tracker.set_download(task["desc"], True)
+                        tracker.set_path(task["desc"], downloaded_open_file)
 
-            print("Upload dan download sukses.")
+            login_to_apex(driver, apex_url_request, username, password)
 
-            login_to_apex(driver, apex_url_upload, username, password)
+            for cust in list_customer_ids:
+                # Cek tracker, jika sudah download, skip
+                tracker_row = next((row for row in tracker.rows if str(row["task"]) == str(cust["nama_customer"])), None)
+                if tracker_row and tracker_row.get("download"):
+                    print(f"Sudah berhasil download untuk {cust['nama_customer']}, skip request & download.")
+                    continue
 
-            for cust in list_customer:
                 customer_id = cust["customer_id"]
-                include_today = cust["include_today"]
-
+                include_today = cust.get("include_today", False)
                 tanggal_akhir = today_str if include_today else yesterday_str
                 date_ranges = generate_date_ranges(tanggal_awal, tanggal_akhir)
-
                 for start, end in date_ranges:
                     try:
                         fill_form_request(driver, customer_id, start, end)
+                        tracker.set_request(cust["nama_customer"], True)
                         request_info.append((
                             customer_id,
                             datetime.strptime(start, "%d-%b-%Y").strftime("%y%m%d"),
                             datetime.strptime(end, "%d-%b-%Y").strftime("%y%m%d"),
+                            cust["nama_customer"]
                         ))
                     except Exception as e:
                         print(f"Request gagal {customer_id} ({start}-{end}): {e}")
 
-            
-            # klik tombol History
-            tombol_history = driver.find_element(By.ID, "B49871477158701971")
-            tombol_history.click()
+            driver.find_element(By.ID, "B49871477158701971").click()
             time.sleep(2)
 
-            for customer_id, start_fmt, end_fmt in request_info:
+            for customer_id, start_fmt, end_fmt, nama_customer in request_info:
+                # Cek tracker, jika sudah download, skip
+                tracker_row = next((row for row in tracker.rows if str(row["task"]) == str(nama_customer)), None)
+                if tracker_row and tracker_row.get("download"):
+                    print(f"Sudah berhasil download untuk {nama_customer}, skip download.")
+                    continue
+
                 try:
                     filename = click_download_link(driver, customer_id=customer_id, start_fmt=start_fmt, end_fmt=end_fmt)
-                    wait_for_download(download_dir, base_file_name, target_filename=filename)
-                    driver.refresh()
+                    if filename:
+                        downloaded = wait_for_download(download_dir, base_file_name, target_filename=filename, contains_text=customer_id)
+                        if downloaded:
+                            tracker.set_download(nama_customer, True)
+                            tracker.set_path(nama_customer, downloaded)
                 except Exception as e:
-                    print(f"Download gagal {customer_id} ({start_fmt}-{end_fmt}): {e}")
+                    print(f"Download gagal untuk {customer_id}: {e}")
 
-            print("Semua proses APEX berhasil.")
             return True
 
         except Exception as e:

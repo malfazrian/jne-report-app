@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-def extract_rt_awb(input_path, output_path):
+def extract_rt_awb(desc, input_path, output_path, tracker=None):
     try:
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
@@ -10,27 +10,46 @@ def extract_rt_awb(input_path, output_path):
         except UnicodeDecodeError:
             df = pd.read_csv(input_path, encoding="latin1")
 
-        print("File Danamon berhasil dibaca!")
+        print(f"File {desc} berhasil dibaca!")
 
         df.columns = df.columns.str.strip()
 
         required_columns = {"CONNOTE_RETURN_RT", "STATUS_POD"}
         if not required_columns.issubset(df.columns):
-            raise ValueError(f"Kolom tidak lengkap. Kolom tersedia: {df.columns.tolist()}")
+            detail = f"Kolom tidak lengkap. Kolom tersedia: {df.columns.tolist()}"
+            print(detail)
+            if tracker:
+                tracker.set_preprocess(desc, False)
+            return
 
         df["STATUS_POD"] = df["STATUS_POD"].astype(str).str.strip().str.upper()
-
         df_filtered = df[df["STATUS_POD"].isin(["RU SHIPPER/ORIGIN"])][["CONNOTE_RETURN_RT"]]
 
-        df_filtered.to_csv(output_path, index=False, header=False, encoding="utf-8-sig")
+        if df_filtered.empty:
+            detail = f"Tidak ada data RT AWB dengan status 'RU SHIPPER/ORIGIN' ditemukan."
+            print(detail)
+            if tracker:
+                tracker.set_preprocess(desc, False)
+            return
 
-        print(f"RT AWB Danamon disimpan ke: {output_path}")
+        df_filtered.to_csv(output_path, index=False, header=False, encoding="utf-8-sig")
+        print(f"RT AWB {desc} disimpan ke: {output_path}")
+        if tracker:
+            tracker.set_preprocess(desc, True)
 
     except Exception as e:
-        print(f"Gagal mengekstrak RT AWB Danamon: {e}")
+        detail = f"Gagal mengekstrak RT AWB: {e}"
+        print(detail)
+        if tracker:
+            tracker.set_preprocess(desc, False)
 
-def run_rt_awb_extraction(tasks: list):
+def run_rt_awb_extraction(tasks: list, tracker=None):
     for task in tasks:
         print(f"Memproses RT AWB {task['desc']}...")
-        extract_rt_awb(task["input_path"], task["output_path"])
+        extract_rt_awb(
+            desc=task["desc"],
+            input_path=task["input_path"],
+            output_path=task["output_path"],
+            tracker=tracker
+        )
         print(f"Proses {task['desc']} selesai.\n")

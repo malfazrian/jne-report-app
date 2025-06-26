@@ -1,0 +1,12 @@
+Task,Preprocess,Request,Download,Result Path,Praprocess
+Open Danamon,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 260625_6403695.csv,True
+Open Generali,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 260625_6403695.csv,False
+Open Kalog,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 260625_6403695.csv,False
+Open LSIN,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 260625_6403695.csv,False
+Open Smartfren,False,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 260625_6403695.csv,False
+New Smartfren,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 260625_6403695.csv,False
+RT Danamon,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 260625_6403695.csv,True
+New Danamon 00,False,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81635700_250625_250626_6403697_6403697.csv,True
+New Danamon 01,False,True,False,,False
+New Kalog,False,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81728700_250625_250625_6403699_6403699.csv,False
+New LSIN,False,True,False,,False
