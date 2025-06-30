@@ -1,5 +1,5 @@
 import pandas as pd
-import os
+from workflows.data_ops import (safe_read_csv)
 
 def filter_start_with_and_save_data(
     input_path: str,
@@ -13,7 +13,7 @@ def filter_start_with_and_save_data(
     """
     try:
         # Baca file CSV
-        df = pd.read_csv(input_path)
+        df = safe_read_csv(input_path)
 
         # Pastikan kolom yang diminta ada
         if filter_column not in df.columns:

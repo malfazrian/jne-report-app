@@ -3,6 +3,12 @@ import re
 import string
 from typing import List, Optional
 
+def safe_read_csv(path, **kwargs):
+    try:
+        return pd.read_csv(path, encoding="utf-8", **kwargs)
+    except UnicodeDecodeError:
+        return pd.read_csv(path, encoding="latin1", **kwargs)
+
 def clean_name(text, badwords=None, gelar=None):
     if pd.isna(text):
         return ""
@@ -78,7 +84,7 @@ def remove_rows_by_prefix(
     """
     try:
         # Baca file CSV
-        df = pd.read_csv(input_path)
+        df = safe_read_csv(input_path)
 
         # Pastikan kolom yang diminta ada
         if filter_column not in df.columns:
@@ -123,7 +129,7 @@ def remove_rows_by_value_exclusion(
     try:
         # Deteksi format input berdasarkan ekstensi
         if input_path.lower().endswith(".csv"):
-            df = pd.read_csv(input_path)
+            df = safe_read_csv(input_path)
         elif input_path.lower().endswith((".xls", ".xlsx")):
             df = pd.read_excel(input_path)
         else:
@@ -170,12 +176,12 @@ def append_selected_columns_to_master(
     """
     try:
         # Baca file Apex (tetap utuh)
-        apex_df = pd.read_csv(apex_input_path) if apex_input_path.endswith(".csv") else pd.read_excel(apex_input_path)
+        apex_df = safe_read_csv(apex_input_path) if apex_input_path.endswith(".csv") else pd.read_excel(apex_input_path)
 
         # Baca file master (jika sudah ada), jika tidak, buat DataFrame kosong
         try:
             if master_file_path.endswith(".csv"):
-                master_df = pd.read_csv(master_file_path)
+                master_df = safe_read_csv(master_file_path)
             else:
                 master_df = pd.read_excel(master_file_path)
         except FileNotFoundError:
@@ -222,7 +228,7 @@ def remove_duplicates_by_column(
     try:
         # Baca file input
         if input_path.endswith(".csv"):
-            df = pd.read_csv(input_path)
+            df = safe_read_csv(input_path)
         else:
             df = pd.read_excel(input_path)
 
@@ -247,7 +253,7 @@ def remove_duplicates_by_column(
         print(f"Terjadi kesalahan: {e}")
 
 def remove_columns_from_file(file_path, columns_to_remove):
-    df = pd.read_csv(file_path)
+    df = safe_read_csv(file_path)
     df = df.drop(columns=[col for col in columns_to_remove if col in df.columns])
     df.to_csv(file_path, index=False)
     print(f"Kolom {columns_to_remove} berhasil dihapus dari {file_path}")

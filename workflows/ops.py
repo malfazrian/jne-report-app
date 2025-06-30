@@ -44,7 +44,7 @@ def append_new_awb(new_awb_path, file_master, label, columns_to_remove=None):
             output_format="csv"
         )
 
-def process_rt_awb(updated_rt_awb_path, tracker):
+def process_rt_awb(updated_rt_awb_path):
     print("Mulai proses ekstraksi data RT AWB Danamon dari hasil APEX...")
     result = filter_start_with_and_save_data(
         input_path=updated_rt_awb_path,

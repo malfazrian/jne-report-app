@@ -170,6 +170,7 @@ def fill_form_request(driver, customer_id: str, tanggal_awal: str, tanggal_akhir
             print(f"Request berhasil untuk {customer_id} ({tanggal_awal} - {tanggal_akhir})")
             return
         except StaleElementReferenceException:
+            print("StaleElementReferenceException terjadi, cari ulang elemen...")
             time.sleep(2)
             driver.refresh()
         except Exception as e:

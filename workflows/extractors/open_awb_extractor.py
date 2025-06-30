@@ -8,13 +8,13 @@ warnings.simplefilter(action='ignore', category=pd.errors.DtypeWarning)
 def extract_open_awb(
     input_path,
     output_path,
-    file_type="csv",                # "csv" or "excel"
+    file_type="csv",
     status_column="STATUS_POD",
     awb_column="AWB",
-    exclude_statuses=None,          # e.g. ["SUCCESS", "RETURN SHIPPER", "DELIVERED"]
+    exclude_statuses=None,
     header_row=0,
-    quote_awb=False,                # untuk kasih tanda kutip di depan AWB
-    process_all_sheets=False,       # untuk baca semua sheet dalam file Excel
+    quote_awb=False,
+    process_all_sheets=False,
     task_name=None,
     tracker=None
 ):
@@ -37,8 +37,7 @@ def extract_open_awb(
             file_list = glob.glob(os.path.join(input_path, "*.xlsx"))
 
             if not file_list:
-                msg = f"Tidak ada file Excel ditemukan di folder: {input_path}"
-                print(msg)
+                print(f"Tidak ada file Excel ditemukan di folder: {input_path}")
                 return False
 
             for file in file_list:
@@ -63,29 +62,33 @@ def extract_open_awb(
             if df.empty:
                 print("Data kosong, melewati...")
                 continue
-            df.columns = df.columns.str.strip()
 
-            if {awb_column, status_column}.issubset(df.columns):
-                df[status_column] = df[status_column].astype(str).str.strip().str.upper()
-                df_filtered = df[~df[status_column].isin([s.upper() for s in exclude_statuses])][[awb_column]]
-                df_filtered = df_filtered.dropna(subset=[awb_column])
+            # Normalisasi nama kolom
+            df.columns = df.columns.str.strip().str.upper()
+            awb_col = awb_column.upper()
+            status_col = status_column.upper()
+
+            if {awb_col, status_col}.issubset(df.columns):
+                df[status_col] = df[status_col].astype(str).str.strip().str.upper()
+                df_filtered = df[~df[status_col].isin([s.upper() for s in exclude_statuses])][[awb_col]]
+                df_filtered = df_filtered.dropna(subset=[awb_col])
                 if not df_filtered.empty:
                     combined.append(df_filtered)
             else:
-                msg = f"Kolom tidak ditemukan: dibutuhkan '{awb_column}' dan '{status_column}'"
-                print(msg)
-                return False
+                pass
 
         if combined:
             result_df = pd.concat(combined, ignore_index=True)
 
             if quote_awb:
-                result_df[awb_column] = "'" + result_df[awb_column].astype(str)
+                result_df[awb_col] = "'" + result_df[awb_col].astype(str)
 
             result_df.to_csv(output_path, index=False, header=False, encoding="utf-8-sig")
             print(f"Open AWB disimpan di: {output_path}")
+
             if tracker and task_name:
                 tracker.set_preprocess(task_name, True)
+
             return True
         else:
             print("Tidak ada data AWB yang valid ditemukan.")

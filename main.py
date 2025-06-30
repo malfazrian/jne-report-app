@@ -102,14 +102,14 @@ def main():
 
     # === Proses RT AWB ===
     if updated_rt_danamon_path:
-        process_rt_awb(updated_rt_danamon_path, tracker)
+        process_rt_awb(updated_rt_danamon_path)
         tracker.set_praprocess("RT Danamon", True)
     else:
         print("Path RT Danamon tidak ditemukan di tracker_summary.csv")
 
     print("Semua proses praprocess Danamon selesai.")
 
-    tracker.summary()
+    # tracker.summary()
     print("Semua proses selesai.")
 
 if __name__ == "__main__":
