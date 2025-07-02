@@ -16,7 +16,7 @@ def get_file_master_from_open_awb_tasks(open_awb_tasks, task_name):
             return task["input_path"]
     return None
 
-def preprocess_open_awb(file_master, updated_open_awb_path, columns_to_remove=None):
+def preprocess_open_awb(file_master, updated_open_awb_path, columns_to_remove=None, allowed_account_ids=None):
     print("Proses hapus data Open AWB di file master...")
     remove_rows_by_value_exclusion(
         input_path=file_master,
@@ -31,6 +31,7 @@ def preprocess_open_awb(file_master, updated_open_awb_path, columns_to_remove=No
         apex_input_path=updated_open_awb_path,
         master_file_path=file_master,
         columns_to_exclude=columns_to_remove,
+        allowed_account_ids=allowed_account_ids,
         output_format="csv"
     )
 

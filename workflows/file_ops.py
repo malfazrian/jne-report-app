@@ -2,6 +2,7 @@ import os
 import glob
 import shutil
 import pandas as pd
+import pyzipper
 from datetime import datetime
 
 def ensure_folder(path):
@@ -12,6 +13,25 @@ def clear_folder_of_csvs(folder):
     for file in os.listdir(folder):
         if file.endswith(".csv"):
             os.remove(os.path.join(folder, file))
+
+def clear_folder(folder_path: str):
+    """
+    Menghapus semua file di dalam folder tertentu (tidak termasuk subfolder).
+
+    Parameters:
+        folder_path (str): Path folder yang ingin dibersihkan.
+
+    Returns:
+        None
+    """
+    try:
+        for file in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, file)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+        print(f"Semua file di folder '{folder_path}' berhasil dihapus.")
+    except Exception as e:
+        print(f"Gagal menghapus isi folder '{folder_path}': {e}")
 
 def move_csvs_to_folder(source_dir, destination_dir):
     print(f"Mencari file CSV di: {source_dir}")
@@ -79,3 +99,39 @@ def backup_open_awb_files():
     move_csvs_to_folder(data_dir, archive_dir)
 
     print("Backup selesai.")
+
+def extract_zip_with_password(zip_path, extract_to, password, delete_after=True):
+    """
+    Mengekstrak ZIP yang dikunci password menggunakan pyzipper.
+
+    Parameters:
+        zip_path (str): Path file zip.
+        extract_to (str): Folder tujuan ekstrak.
+        password (str): Password zip (tanpa encode manual).
+        delete_after (bool): Jika True, hapus file zip setelah ekstraksi.
+
+    Returns:
+        list: Daftar file yang berhasil diekstrak.
+    """
+    extracted_files = []
+    try:
+        with pyzipper.AESZipFile(zip_path) as zf:
+            zf.pwd = password.encode("utf-8")
+            for file in zf.namelist():
+                try:
+                    zf.extract(member=file, path=extract_to)
+                    extracted_files.append(file)
+                    print(f"Diekstrak: {file}")
+                except RuntimeError as e:
+                    print(f"Gagal ekstrak '{file}': {e}")
+
+        if delete_after:
+            os.remove(zip_path)
+            print(f"File ZIP dihapus: {zip_path}")
+
+        print(f"Selesai ekstrak ke: {extract_to}")
+        return extracted_files
+
+    except Exception as e:
+        print(f"Gagal ekstrak ZIP: {e}")
+        return []

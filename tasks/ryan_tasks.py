@@ -7,7 +7,7 @@ open_awb_tasks = [
             "status_column": "STATUS_POD",
             "awb_column": "AWB",
             "exclude_statuses": ["SUCCESS", "RETURN SHIPPER", "DELIVERED"],
-        },
+         },
         {
             "desc": "Open Generali",
             "input_path": "D:/RYAN/3. Reports/Generali",

@@ -154,47 +154,60 @@ def remove_rows_by_value_exclusion(
 
     except Exception as e:
         print(f"Terjadi kesalahan: {e}")
-    
+
 def append_selected_columns_to_master(
     apex_input_path: str,
     master_file_path: str,
     columns_to_exclude: Optional[List[str]] = None,
+    allowed_account_ids: Optional[List[str]] = None,
     output_format: str = "csv"
 ):
     """
-    Menambahkan data dari file Apex ke file master, dengan mengecualikan kolom tertentu
-    hanya untuk penambahan, tanpa mengubah file Apex aslinya.
+    Menambahkan data dari file Apex ke file master, dengan filter ID_ACCOUNT dan
+    pengecualian kolom tertentu, tanpa mengubah file Apex aslinya.
 
     Parameters:
         apex_input_path (str): Path file hasil Apex.
-        columns_to_exclude (list): List nama kolom yang ingin dihapus sebelum digabung ke master.
         master_file_path (str): Path file master yang akan diperbarui.
+        columns_to_exclude (list): List nama kolom yang ingin dihapus sebelum digabung ke master.
+        allowed_account_ids (list): Daftar ID_ACCOUNT yang boleh digabungkan.
         output_format (str): Format file master: 'csv' atau 'excel'.
 
     Returns:
         None
     """
     try:
-        # Baca file Apex (tetap utuh)
-        apex_df = safe_read_csv(apex_input_path) if apex_input_path.endswith(".csv") else pd.read_excel(apex_input_path)
+        # Baca file Apex
+        apex_df = (
+            safe_read_csv(apex_input_path)
+            if apex_input_path.endswith(".csv")
+            else pd.read_excel(apex_input_path)
+        )
 
-        # Baca file master (jika sudah ada), jika tidak, buat DataFrame kosong
+        # Filter berdasarkan allowed_account_ids jika disediakan
+        if allowed_account_ids is not None:
+            if "ID_ACCOUNT" not in apex_df.columns:
+                raise KeyError("Kolom 'ID_ACCOUNT' tidak ditemukan dalam file Apex.")
+            apex_df = apex_df[apex_df["ID_ACCOUNT"].astype(str).isin([str(i) for i in allowed_account_ids])]
+
+        # Baca file master (jika ada), atau buat df kosong
         try:
-            if master_file_path.endswith(".csv"):
-                master_df = safe_read_csv(master_file_path)
-            else:
-                master_df = pd.read_excel(master_file_path)
+            master_df = (
+                safe_read_csv(master_file_path)
+                if master_file_path.endswith(".csv")
+                else pd.read_excel(master_file_path)
+            )
         except FileNotFoundError:
             master_df = pd.DataFrame()
 
-        # Buat salinan Apex tanpa kolom yang tidak diperlukan
+        # Drop kolom yang tidak diperlukan
         columns_to_exclude = columns_to_exclude or []
         apex_filtered = apex_df.drop(columns=[col for col in columns_to_exclude if col in apex_df.columns])
 
-        # Gabungkan ke master
+        # Gabungkan
         combined_df = pd.concat([master_df, apex_filtered], ignore_index=True)
 
-        # Simpan ke master path
+        # Simpan hasil
         if output_format.lower() == "csv":
             combined_df.to_csv(master_file_path, index=False)
         elif output_format.lower() == "excel":
