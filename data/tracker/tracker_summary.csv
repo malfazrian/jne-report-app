@@ -1,12 +1,19 @@
 Task,Preprocess,Request,Download,Result Path,Praprocess
-Open Danamon,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 020725_6408414.csv,False
-Open Generali,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 020725_6408414.csv,False
-Open Kalog,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 020725_6408414.csv,False
-Open LSIN,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 020725_6408414.csv,False
-Open Smartfren,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 020725_6408414.csv,False
-New Smartfren,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 020725_6408414.csv,False
-RT Danamon,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryand 020725_6408414.csv,False
-New Danamon 00,False,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81635700_250701_250702_8392443_8392443.csv,False
-New Danamon 01,False,True,False,,False
-New Kalog,False,True,False,,False
-New LSIN,False,True,False,,False
+Open Danamon,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv,True
+Open Generali,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv,True
+Open Kalog,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv,True
+Open LSIN,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv,True
+Open Smartfren,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv,True
+RT Danamon,True,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv,True
+New Danamon 81635700,False,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81635700_250804_250805_8725157_8725157.csv,False
+New Danamon 81635701,False,True,False,no_data,False
+New Kalog,False,True,False,no_data,True
+New LSIN,False,True,False,no_data,True
+New Smartfren 10528201,False,True,False,no_data,True
+New Smartfren 80029200,False,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80029200_250804_250804_8725170_8725170.csv,True
+New Smartfren 80044400,False,True,False,no_data,True
+New Smartfren 80044800,False,True,False,no_data,True
+New Smartfren 80044801,False,True,False,no_data,True
+New Smartfren 80055900,False,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80055900_250804_250804_8725179_8725179.csv,True
+New Smartfren 80539301,False,True,False,no_data,True
+New Smartfren 80539308,False,True,True,C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80539308_250804_250804_8725182_8725182.csv,True

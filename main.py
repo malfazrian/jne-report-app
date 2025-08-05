@@ -1,19 +1,21 @@
-# main.py
-from workflows.ops import get_task_paths, get_file_master_from_open_awb_tasks, preprocess_open_awb, append_new_awb, process_rt_awb
-from workflows.file_ops import backup_open_awb_files, clear_folder_of_csvs, clear_folder, merge_csv_files, extract_zip_with_password
-from workflows.data_ops import remove_duplicates_by_column, remove_columns_from_file
+# main.py 
+import sys
+from workflows.logger import DualLogger
+from workflows.ops import get_task_paths
+from workflows.file_ops import backup_open_awb_files, clear_folder_of_csvs, merge_csv_files, refresh_excel_workbooks
+from workflows.data_ops import append_selected_columns_to_master, overwrite_excel_table_with_csv
 from workflows.extractors.open_awb_extractor import run_open_awb_extraction
 from workflows.extractors.new_awb_extractor import run_new_awb_extraction
 from workflows.extractors.awb_rt_extractor import run_rt_awb_extraction
 from workflows.extractors.apex_data_extractor import process_apex_upload_and_request
-from workflows.email_ops import buka_thunderbird, refresh_inbox, find_latest_matching_email, save_attachments_danamon, extract_date_from_subject
 from tasks.ryan_tasks import apex_config, open_awb_tasks, new_awb_tasks, rt_awb_tasks, list_customer_ids
 from workflows.tracker import TaskTableTracker
-from workflows.danamon_ops import process_pickup_data
-
+from workflows.danamon_ops import process_danamon_report
+from workflows.generali_ops import process_generali_reports
 tracker = TaskTableTracker(open_awb_tasks + new_awb_tasks + rt_awb_tasks + list_customer_ids)
 
 def main():
+    sys.stdout = sys.stderr = DualLogger("data/tracker/log.txt")
     print("Memulai ReportApp..")
     
     print("Menjalankan proses backup file sebelumnya...")
@@ -32,7 +34,7 @@ def main():
     file = merge_csv_files(
         input_folder="c:/Users/DELL/Desktop/ReportApp/data",
         output_folder="c:/Users/DELL/Desktop/ReportApp/data",
-        filename_prefix="Update Ryand"
+        filename_prefix="Update Ryan"
     )
 
     clear_folder_of_csvs("c:/Users/DELL/Desktop/ReportApp/data/apex_downloads")
@@ -54,95 +56,66 @@ def main():
     else:
         print("Proses upload dan unduh APEX gagal.")
 
-    tracker.summary()
+    tracker.summary(print_summary=False)
+    task_paths = get_task_paths("c:/Users/DELL/Desktop/ReportApp/data/tracker/tracker_summary.csv")
 
     # === Proses Laporan Danamon ===
-    print("=== Mulai Proses Praprocess Laporan Danamon dari hasil APEX ===")
+    process_danamon_report(tracker, task_paths)
 
-    columns_to_remove = [
-        "HO_OFFICE_NO", "HO_OFFICE_DATE", "LATEST_SM_ORIGIN", "LATEST_SM_DEST", "LATEST_SM_NO", "LATEST_SM_DATE",
-        "1ST_PREVIOUS_SM_ORIGIN", "1ST_PREVIOUS_SM_DEST", "1ST_PREVIOUS_SM_NO", "1ST_PREVIOUS_SM_DATE", 
-        "2ND_PREVIOUS_SM_ORIGIN", "2ND_PREVIOUS_SM_DEST", "2ND_PREVIOUS_SM_NO", "2ND_PREVIOUS_SM_DATE", "STATUS_WEB"
-    ]
-    account_ids = ["'81635700", "'81635701"]
-
-    task_paths = get_task_paths("c:/Users/DELL/Desktop/ReportApp/data/tracker/tracker_summary.csv")
-    updated_open_awb_danamon_path = task_paths.get("Open Danamon")
-    updated_rt_danamon_path = task_paths.get("RT Danamon")
-    new_awb_danamon_00_path = task_paths.get("New Danamon 00")
-    new_awb_danamon_01_path = task_paths.get("New Danamon 01")
-
-    file_master = get_file_master_from_open_awb_tasks(open_awb_tasks, "Open Danamon")
-
-    # === Proses Open AWB ===
-    if updated_open_awb_danamon_path and file_master:
-        preprocess_open_awb(file_master, updated_open_awb_danamon_path, columns_to_remove, account_ids)
-        tracker.set_praprocess("Open Danamon", True)
-
-    # === Gabungkan New AWB ===
-    if new_awb_danamon_00_path:
-        append_new_awb(new_awb_danamon_00_path, file_master, "New Danamon 00", columns_to_remove)
-        tracker.set_praprocess("New Danamon 00", True)
-    else:
-        print("Path New Danamon 00 tidak ditemukan di tracker_summary.csv")
-
-    if new_awb_danamon_01_path:
-        append_new_awb(new_awb_danamon_01_path, file_master, "New Danamon 01", columns_to_remove)
-        tracker.set_praprocess("New Danamon 01", True)
-    else:
-        print("Path New Danamon 01 tidak ditemukan di tracker_summary.csv")
-
-    remove_columns_from_file(file_master, columns_to_remove)
-
-    # === Hapus Duplikat ===
-    print("Hapus duplikat berdasarkan AWB di file master...")
-    remove_duplicates_by_column(
-        input_path=file_master,
-        filter_column="AWB",
-        output_path=file_master,
-        output_format="csv"
+    # === Pra Proses Laporan Generali, Kalog, LSIN, Smartfren===
+    print("=== Mulai Praprocess Laporan Generali, Kalog, LSIN & Smartfren ===")
+    updated_open_awb_path = (
+        task_paths.get("Open Generali") or
+        task_paths.get("Open Kalog") or
+        task_paths.get("Open LSIN") or
+        task_paths.get("Open Smartfren")
     )
 
-    # === Proses RT AWB ===
-    if updated_rt_danamon_path:
-        process_rt_awb(updated_rt_danamon_path)
-        tracker.set_praprocess("RT Danamon", True)
+    # List task name yang ingin diproses
+    target_tasks = [
+        "New Kalog", "New LSIN",
+        "New Smartfren 10528201", "New Smartfren 80029200", "New Smartfren 80044400",
+        "New Smartfren 80044800", "New Smartfren 80044801", "New Smartfren 80055900",
+        "New Smartfren 80539301", "New Smartfren 80539308"
+    ]
+    
+    if updated_open_awb_path:
+        for task_name in target_tasks:
+            apex_path = task_paths.get(task_name)
+            if apex_path:
+                append_selected_columns_to_master(
+                    master_file_path=updated_open_awb_path,
+                    apex_input_path=apex_path,
+                )
+                tracker.set_praprocess(task_name, True)
+                        
+        overwrite_excel_table_with_csv(
+        file_path="d:\\RYAN\\2. Queries\\1. Data Apex Mentah.xlsx",
+        csv_path=updated_open_awb_path,
+        sheet_name="Sheet1",
+        )
+        refresh_excel_workbooks([
+            "d:\\RYAN\\2. Queries\\2. Query Update Status Generali.xlsx",
+            "d:\\RYAN\\2. Queries\\2. Query Update Status.xlsx",
+            "d:\\RYAN\\2. Queries\\3. Query Report Generali.xlsx",
+            "d:\\RYAN\\2. Queries\\3. Query Report KALOG.xlsx",
+            "d:\\RYAN\\2. Queries\\3. Query Report LSIN.xlsx",
+            "d:\\RYAN\\2. Queries\\3. Query Report Smartfren.xlsx"
+        ])
+        tracker.set_praprocess("Open Generali", True)
+        tracker.set_praprocess("Open Kalog", True)
+        tracker.set_praprocess("Open LSIN", True)
+        tracker.set_praprocess("Open Smartfren", True)
+
     else:
-        print("Path RT Danamon tidak ditemukan di tracker_summary.csv")
+        print("Path Updated Open AWB tidak ditemukan di tracker_summary.csv")
+        return
+    
+    # === Proses Laporan Generali===
+    # print("=== Mulai Proses Laporan Generali ===")
+    # process_generali_reports()
 
-    print("Semua proses praprocess Danamon selesai.")
-
-    # === Proses Ambil Data OS dan Pickup dari Email ===
-    print("Membuka Thunderbird dan menyegarkan inbox...")
-    buka_thunderbird()
-    refresh_inbox("D:/email/Email TB/outlook.office365.com/Inbox.sbd/DANAMON", timeout=10)
-
-    print("Mencari email dengan subjek 'OS CARD JNE'...")
-    email_os = find_latest_matching_email(
-        file_path="D:/email/Email TB/outlook.office365.com/Inbox.sbd/DANAMON",
-        subject_prefix="OS CARD JNE",
-        max_emails=10)
-    if email_os:
-        save_attachments_danamon(email_os, save_dir="d:/RYAN/1. References/Danamon")
-        print("Email OS ditemukan dan attachment disimpan.")
-
-    print("Mencari email dengan subjek 'DATA PICKUP JNE'...")
-    email_pickup = find_latest_matching_email(
-        file_path="D:/email/Email TB/outlook.office365.com/Inbox.sbd/DANAMON",
-        subject_prefix="DATA PICKUP JNE",
-        max_emails=10)
-    if email_pickup:
-        save_attachments_danamon(email_pickup, save_dir="d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt")
-        print("Email Pickup ditemukan dan attachment disimpan.")
-        pickup_date = extract_date_from_subject(email_pickup.get("Subject", ""))
-        mentah_folder = "d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt"
-        if pickup_date:
-            print("Memproses data pickup dari folder 'Mentah Txt'...")
-            process_pickup_data(mentah_folder, subject_date=pickup_date)
-        else:
-            print("Gagal membaca tanggal dari subject.")
-
-    # tracker.summary()
+    tracker.summary()
     print("Semua proses selesai.")
 
 if __name__ == "__main__":

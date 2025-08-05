@@ -41,11 +41,12 @@ class TaskTableTracker:
             if str(row["task"]) == str(task_name):
                 row["praprocess"] = value
 
-    def summary(self, output_folder="data/tracker", filename="tracker_summary.csv"):
-        print("\n=== TASK TABLE TRACKER ===")
-        print(f"{'Task':<20} {'Preprocess':<10} {'Request':<10} {'Download':<10} {'Praprocess':<10}")
-        for row in self.rows:
-            print(f"{row['task']:<20} {str(row['preprocess']):<10} {str(row['request']):<10} {str(row['download']):<10} {str(row['praprocess']):<10}")
+    def summary(self, output_folder="data/tracker", filename="tracker_summary.csv", print_summary=True):
+        if print_summary:
+            print("\n=== TASK TABLE TRACKER ===")
+            print(f"{'Task':<20} {'Preprocess':<10} {'Request':<10} {'Download':<10} {'Praprocess':<10}")
+            for row in self.rows:
+                print(f"{row['task']:<20} {str(row['preprocess']):<10} {str(row['request']):<10} {str(row['download']):<10} {str(row['praprocess']):<10}")
         
         os.makedirs(output_folder, exist_ok=True)
         output_path = os.path.join(output_folder, filename)
@@ -61,7 +62,8 @@ class TaskTableTracker:
                     row.get("result_path", ""),
                     row["praprocess"]
                 ])
-        print(f"Tracker summary disimpan ke: {output_path}")
+        if print_summary:
+            print(f"Tracker summary disimpan ke: {output_path}")
 
 # Contoh inisialisasi:
 # from tasks.ryan_tasks import open_awb_tasks

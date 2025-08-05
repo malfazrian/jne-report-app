@@ -4,13 +4,14 @@ import os
 import subprocess
 import time
 import pyautogui
+import py7zr
 from email.policy import default
 from email.utils import parsedate_to_datetime
 from datetime import datetime
 from bs4 import BeautifulSoup
 from typing import Optional
 from zipfile import BadZipFile
-from workflows.file_ops import extract_zip_with_password
+from workflows.file_ops import extract_archive_with_password
 
 def buka_thunderbird():
     subprocess.Popen(["C:\\Program Files\\Mozilla Thunderbird Beta\\thunderbird.exe"])
@@ -38,6 +39,9 @@ def parse_custom_date(date_str):
         return datetime.strptime(date_str, "%d-%b-%Y %H:%M:%S")
     except Exception:
         return None
+    
+def normalize_subject(subject: str) -> str:
+    return subject.lower().replace("re:", "").replace("fwd:", "").strip()
 
 def find_latest_matching_email(file_path, subject_prefix, from_email: Optional[str] = None, max_emails=100):
     latest_email = None
@@ -81,7 +85,7 @@ def find_latest_matching_email(file_path, subject_prefix, from_email: Optional[s
                 print("Gagal parse tanggal:", date_str)
 
         # Cek kecocokan subject dan (jika ada) from_email
-        subject_match = subject and subject.startswith(subject_prefix)
+        subject_match = subject and subject_prefix.lower() in normalize_subject(subject)
         from_match = True if not from_email else from_email.lower() in from_.lower()
 
         if subject_match and from_match:
@@ -148,8 +152,17 @@ def save_attachments(msg, save_dir="attachments"):
             filepath = os.path.join(save_dir, filename)
             with open(filepath, "wb") as f:
                 f.write(part.get_payload(decode=True))
-            print(f"📎 Attachment disimpan: {filepath}")
+            print(f"Attachment disimpan: {filepath}")
             count += 1
+
+            # Ekstrak jika .7z (tanpa password)
+            if filename.endswith(".7z"):
+                try:
+                    with py7zr.SevenZipFile(filepath, mode='r') as archive:
+                        archive.extractall(path=save_dir)
+                        print(f"Berhasil extract: {filename}")
+                except Exception as e:
+                    print(f"Gagal extract {filename}: {e}")
 
     if count == 0:
         print("Tidak ada attachment ditemukan.")
@@ -163,14 +176,31 @@ def save_attachments_danamon(msg, save_dir="attachments"):
     subject = msg.get("Subject", "")
     print("Subject email:", subject)
 
-    # Cari tanggal dari subject (format 30/06/25)
-    match = re.search(r"(\d{2})/\d{2}/\d{2}", subject)
+    password = None
+
+    # --- 1. Coba format angka: dd/mm/yy atau dd-mm-yy
+    match = re.search(r"(\d{2})[/-]\d{2}[/-]\d{2}", subject)
     if match:
         dd = match.group(1)
         password = f"danamon{dd}"
     else:
-        print("Tidak ditemukan tanggal dalam subject. ZIP tidak akan diextract.")
-        password = None
+        # --- 2. Coba format nama bulan Indonesia: 14 JULI 2025
+        match_bulan = re.search(r"(\d{1,2})\s+([A-Z]+)\s+(\d{4})", subject.upper())
+        bulan_mapping = {
+            "JANUARI": 1, "FEBRUARI": 2, "MARET": 3, "APRIL": 4,
+            "MEI": 5, "JUNI": 6, "JULI": 7, "AGUSTUS": 8, "SEPTEMBER": 9,
+            "OKTOBER": 10, "NOVEMBER": 11, "DESEMBER": 12
+        }
+        if match_bulan:
+            dd = match_bulan.group(1).zfill(2)  # Pastikan 2 digit
+            bulan_nama = match_bulan.group(2)
+            if bulan_nama in bulan_mapping:
+                password = f"danamon{dd}"
+            else:
+                print("Nama bulan tidak dikenali:", bulan_nama)
+
+    if not password:
+        print("Tidak ditemukan tanggal dalam subject. ZIP/7Z tidak akan diextract.")
 
     count = 0
     for part in msg.walk():
@@ -184,19 +214,17 @@ def save_attachments_danamon(msg, save_dir="attachments"):
         filepath = os.path.join(save_dir, filename)
         with open(filepath, "wb") as f:
             f.write(part.get_payload(decode=True))
-        print(f"📎 Attachment disimpan: {filepath}")
+        print(f"Attachment disimpan: {filepath}")
         count += 1
 
-        # Jika zip, langsung extract
-        if filename.endswith(".zip") and password:
-            try:
-                extract_zip_with_password(
-                    zip_path=filepath,
-                    extract_to=save_dir,
-                    password=password
-                )
-            except BadZipFile:
-                print("Gagal membuka ZIP: file rusak atau password salah.")
+        # Ekstrak jika ZIP/7Z dan password tersedia
+        if filename.lower().endswith((".zip", ".7z")) and password:
+            extract_archive_with_password(
+                file_path=filepath,
+                extract_to=save_dir,
+                password=password,
+                delete_after=True
+            )
 
     if count == 0:
         print("Tidak ada attachment ditemukan.")
@@ -205,14 +233,14 @@ def save_attachments_danamon(msg, save_dir="attachments"):
 
 def extract_date_from_subject(subject: str) -> Optional[str]:
     """
-    Ekstrak tanggal dari subject email dan konversi ke format YYYY-MM-DD.
+    Ekstrak tanggal dari subject email dan konversi ke format DD/MM/YYYY.
 
     Contoh subject:
         - "DATA PICKUP JNE 30/06/25" → "2025-06-30"
         - "OS CARD JNE 01/07/2025"   → "2025-07-01"
 
     Returns:
-        str (format YYYY-MM-DD) jika berhasil, None jika gagal.
+        str (format DD/MM/YYYY) jika berhasil, None jika gagal.
     """
     if not subject:
         return None
@@ -231,39 +259,3 @@ def extract_date_from_subject(subject: str) -> Optional[str]:
         return date_obj.strftime("%d/%m/%y")
     except ValueError:
         return None
-
-# mbox_path = "D:/email/Email TB/outlook.office365.com/Inbox"
-# buka_thunderbird()
-# refresh_inbox(mbox_path)
-
-# print("Membaca file:", mbox_path)
-
-# # Temukan email terbaru yang sesuai dengan kriteria
-# latest = find_latest_matching_email(
-#     file_path=mbox_path,
-#     from_email="jne-dashboard@jne.co.id",
-#     subject_prefix="SHIPMENT CCC",
-#     max_emails=100
-# )
-
-# # Proses hasil
-# if latest:
-#     body = get_email_body(latest)
-    
-#     info = extract_login_info_html(body)
-#     if info:
-#         print("Informasi berhasil ditemukan:")
-#         print("Link:", info["Link"])
-#         print("Username:", info["Username"])
-#         print("Password:", info["Password"])
-
-#         # Simpan ke CSV
-#         filename = "login_info.csv"
-#         with open(filename, mode="w", newline="", encoding="utf-8") as f:
-#             writer = csv.DictWriter(f, fieldnames=["Link", "Username", "Password"])
-#             writer.writeheader()
-#             writer.writerow(info)
-
-#         print(f"Data berhasil disimpan ke: {filename}")
-#     else:
-#         print("Tidak ditemukan pola Link, Username, dan Password dalam body email.")

@@ -50,12 +50,12 @@ open_awb_tasks = [
 ]
 
 new_awb_tasks = [
-    {
-        "desc": "New Smartfren",
-        "base_folder": r"\\192.168.9.74\f\ALL REPORT\01. JANUARI 2024\ALL REPORT GABUNGAN",
-        "archive_file": r"c:/Users/DELL/Desktop/ReportApp/data/Archive/Open AWB Smartfren.csv",
-        "output_file": r"c:/Users/DELL/Desktop/ReportApp/data/New AWB Smartfren.csv"
-    }
+    # {
+    #     "desc": "New Smartfren",
+    #     "base_folder": r"\\192.168.9.74\f\ALL REPORT\01. JANUARI 2024\ALL REPORT GABUNGAN",
+    #     "archive_file": r"c:/Users/DELL/Desktop/ReportApp/data/Archive/SLA0_Y_NA_80539308_250717_250717_8447786_8447786.csv",
+    #     "output_file": r"c:/Users/DELL/Desktop/ReportApp/data/New AWB Smartfren.csv"
+    # }
 ]
 
 rt_awb_tasks = [
@@ -69,12 +69,12 @@ rt_awb_tasks = [
 list_customer_ids = [
     {
         "customer_id": "81635700",
-        "nama_customer": "New Danamon 00",
+        "nama_customer": "New Danamon 81635700",
         "include_today": True,
     },
     {
         "customer_id": "81635701",
-        "nama_customer": "New Danamon 01",
+        "nama_customer": "New Danamon 81635701",
         "include_today": True,
     },
     {
@@ -87,6 +87,46 @@ list_customer_ids = [
         "nama_customer": "New LSIN",
         "include_today": False,
     },
+    {
+        "customer_id": "10528201",
+        "nama_customer": "New Smartfren 10528201",
+        "include_today": False,
+    },
+    {
+        "customer_id": "80029200",
+        "nama_customer": "New Smartfren 80029200",
+        "include_today": False,
+    },
+    {
+        "customer_id": "80044400",
+        "nama_customer": "New Smartfren 80044400",
+        "include_today": False,
+    },
+    {
+        "customer_id": "80044800",
+        "nama_customer": "New Smartfren 80044800",
+        "include_today": False,
+    },
+    {
+        "customer_id": "80044801",
+        "nama_customer": "New Smartfren 80044801",
+        "include_today": False,
+    },
+    {
+        "customer_id": "80055900",
+        "nama_customer": "New Smartfren 80055900",
+        "include_today": False,
+    },
+    {
+        "customer_id": "80539301",
+        "nama_customer": "New Smartfren 80539301",
+        "include_today": False,
+    },
+    {
+        "customer_id": "80539308",
+        "nama_customer": "New Smartfren 80539308",
+        "include_today": False,
+    }
 ]
 
 apex_config = {

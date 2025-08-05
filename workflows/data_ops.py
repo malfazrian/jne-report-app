@@ -1,4 +1,7 @@
 import pandas as pd
+import csv
+from openpyxl import load_workbook
+from openpyxl.utils.cell import column_index_from_string, coordinate_from_string
 import re
 import string
 from typing import List, Optional
@@ -269,4 +272,45 @@ def remove_columns_from_file(file_path, columns_to_remove):
     df = safe_read_csv(file_path)
     df = df.drop(columns=[col for col in columns_to_remove if col in df.columns])
     df.to_csv(file_path, index=False)
-    print(f"Kolom {columns_to_remove} berhasil dihapus dari {file_path}")
+
+def overwrite_excel_table_with_csv(csv_path, file_path, sheet_name):
+    df = safe_read_csv(csv_path)
+
+    wb = load_workbook(file_path)
+    ws = wb[sheet_name]
+
+    if not ws.tables:
+        print("Tidak ada tabel yang terdeteksi di worksheet.")
+        return
+
+    for table_name in ws.tables:
+        table = ws.tables[table_name]  # Ambil objek Table dari nama
+        print(f"Perbarui isi tabel: {table_name}")
+
+        # Parsing koordinat
+        start_cell, end_cell = table.ref.split(":")
+        start_col_letter, start_row = coordinate_from_string(start_cell)
+        end_col_letter, _ = coordinate_from_string(end_cell)
+
+        start_col_index = column_index_from_string(start_col_letter)
+        end_col_index = column_index_from_string(end_col_letter)
+        num_cols = end_col_index - start_col_index + 1
+
+        # 1. Hapus semua data lama (kecuali header)
+        max_old_row = ws.max_row
+        for row in ws.iter_rows(min_row=start_row + 1, max_row=max_old_row,
+                                min_col=start_col_index, max_col=end_col_index):
+            for cell in row:
+                cell.value = None
+
+        # 2. Tambahkan data baru dari CSV (tanpa header)
+        for i, row in df.iterrows():
+            for j in range(min(num_cols, len(row))):
+                ws.cell(row=start_row + 1 + i, column=start_col_index + j).value = row.iloc[j]
+
+        # 3. Perbarui referensi area tabel ke baris terakhir
+        new_end_row = start_row + len(df)
+        table.ref = f"{start_col_letter}{start_row}:{end_col_letter}{new_end_row}"
+
+    wb.save(file_path)
+    print(f"Tabel di '{sheet_name}' berhasil diperbarui dengan data dari: {csv_path}")

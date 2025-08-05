@@ -1,6 +1,16 @@
 import csv
-from workflows.data_ops import remove_rows_by_prefix, remove_rows_by_value_exclusion, append_selected_columns_to_master, remove_duplicates_by_column
+from workflows.data_ops import (
+    remove_rows_by_prefix, remove_rows_by_value_exclusion,
+    append_selected_columns_to_master
+)
 from workflows.extractors.extractor import filter_start_with_and_save_data
+from tasks.ryan_tasks import (
+    open_awb_tasks, new_awb_tasks,
+    rt_awb_tasks, list_customer_ids
+)
+from workflows.tracker import TaskTableTracker
+
+tracker = TaskTableTracker(open_awb_tasks + new_awb_tasks + rt_awb_tasks + list_customer_ids)
 
 def get_task_paths(tracker_csv_path):
     task_paths = {}
@@ -26,7 +36,7 @@ def preprocess_open_awb(file_master, updated_open_awb_path, columns_to_remove=No
         output_format="csv"
     )
 
-    print("Gabungkan Updated Open AWB ke file master...")
+    print("Gabungkan Updated Open AWB dari APEX ke file master...")
     append_selected_columns_to_master(
         apex_input_path=updated_open_awb_path,
         master_file_path=file_master,

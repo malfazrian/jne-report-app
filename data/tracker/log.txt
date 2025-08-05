@@ -1,0 +1,3753 @@
+=== Log started at 2025-07-29 07:00:02 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: C:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Generali.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Kalog.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB LSIN.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Smartfren.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan RT AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 280725.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Mengekstrak Open AWB untuk Open Generali...
+Excel dibaca: Generali Juli 2025.xlsx
+Excel dibaca: Generali Juni 2025.xlsx
+Excel dibaca: Generali Mei 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Generali.csv
+Mengekstrak Open AWB untuk Open Kalog...
+Excel dibaca: Report KALOG 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Kalog.csv
+Mengekstrak Open AWB untuk Open LSIN...
+Excel dibaca: Report LSIN 2025 (23 MAY 25).xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB LSIN.csv
+Mengekstrak Open AWB untuk Open Smartfren...
+REPORT SMARTFREN _ 80539308.xlsx - Sheet: 80539308 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet3 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80055900.xlsx - Sheet: 80055900 dibaca.
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Smartfren.csv
+Mengekstrak RT AWB dari berbagai sumber...
+Memproses RT AWB RT Danamon...
+File RT Danamon berhasil dibaca!
+RT AWB RT Danamon disimpan ke: c:/Users/DELL/Desktop/ReportApp/data/RT AWB Danamon.csv
+Proses RT Danamon selesai.
+
+Mengekstrak New AWB dari berbagai sumber...
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 6 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+Open AWB Generali.csv berhasil dimuat.
+Open AWB Kalog.csv berhasil dimuat.
+Open AWB LSIN.csv berhasil dimuat.
+Open AWB Smartfren.csv berhasil dimuat.
+RT AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 290725.csv
+Mengunggah dan mengunduh data dari Apex...
+Mencoba koneksi ke APEX host: 10.18.2.35
+Login ke sistem...
+Mengunggah file: Update Ryan 290725.csv
+File dikirim. Tunggu respon server...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: Update Ryan 290725_6436713.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 290725_6436713.csv (842500 bytes)
+Login ke sistem...
+Request berhasil untuk 81635700 (28-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 81635701 (28-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 81728700 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 81901200 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 10528201 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80029200 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044400 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044800 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044801 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80055900 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80539301 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80539308 (28-Jul-2025 - 28-Jul-2025)
+Error di host 10.18.2.35: Message: stale element reference: stale element not found
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff675d1e935+77845]
+	GetHandleVerifier [0x0x7ff675d1e990+77936]
+	(No symbol) [0x0x7ff675ad9cda]
+	(No symbol) [0x0x7ff675af00f4]
+	(No symbol) [0x0x7ff675aeebc3]
+	(No symbol) [0x0x7ff675ae23d9]
+	(No symbol) [0x0x7ff675ae028f]
+	(No symbol) [0x0x7ff675ae471c]
+	(No symbol) [0x0x7ff675ae47ef]
+	(No symbol) [0x0x7ff675b3289d]
+	(No symbol) [0x0x7ff675b23633]
+	(No symbol) [0x0x7ff675b588ca]
+	(No symbol) [0x0x7ff675b22f76]
+	(No symbol) [0x0x7ff675b58ae0]
+	(No symbol) [0x0x7ff675b80b07]
+	(No symbol) [0x0x7ff675b586a3]
+	(No symbol) [0x0x7ff675b21791]
+	(No symbol) [0x0x7ff675b22523]
+	GetHandleVerifier [0x0x7ff675ff684d+3059501]
+	GetHandleVerifier [0x0x7ff675ff0c0d+3035885]
+	GetHandleVerifier [0x0x7ff676010400+3164896]
+	GetHandleVerifier [0x0x7ff675d38c3e+185118]
+	GetHandleVerifier [0x0x7ff675d4054f+216111]
+	GetHandleVerifier [0x0x7ff675d272e4+113092]
+	GetHandleVerifier [0x0x7ff675d27499+113529]
+	GetHandleVerifier [0x0x7ff675d0e298+10616]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.16
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635700 (28-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 81635701 (28-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 81728700 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 81901200 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 10528201 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80029200 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044400 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044800 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044801 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80055900 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80539301 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80539308 (28-Jul-2025 - 28-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81635700_250728_250729_8485847_8485847.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81635700_250728_250729_8485847_8485847.csv (8743 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81728700_250728_250728_8485850_8485850.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81728700_250728_250728_8485850_8485850.csv (4119 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 10528201, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80029200_250728_250728_8485853_8485853.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80029200_250728_250728_8485853_8485853.csv (21444 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80055900_250728_250728_8485858_8485858.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80055900_250728_250728_8485858_8485858.csv (5867 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80539308_250728_250728_8485860_8485860.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80539308_250728_250728_8485860_8485860.csv (6167 bytes)
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.12
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (28-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 81901200 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 10528201 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044400 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044800 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044801 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80539301 (28-Jul-2025 - 28-Jul-2025)
+Error di host 10.18.2.12: Message: stale element reference: stale element not found
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff675d1e935+77845]
+	GetHandleVerifier [0x0x7ff675d1e990+77936]
+	(No symbol) [0x0x7ff675ad9cda]
+	(No symbol) [0x0x7ff675af00f4]
+	(No symbol) [0x0x7ff675aeebc3]
+	(No symbol) [0x0x7ff675ae23d9]
+	(No symbol) [0x0x7ff675ae028f]
+	(No symbol) [0x0x7ff675ae471c]
+	(No symbol) [0x0x7ff675ae47ef]
+	(No symbol) [0x0x7ff675b3289d]
+	(No symbol) [0x0x7ff675b23633]
+	(No symbol) [0x0x7ff675b588ca]
+	(No symbol) [0x0x7ff675b22f76]
+	(No symbol) [0x0x7ff675b58ae0]
+	(No symbol) [0x0x7ff675b80b07]
+	(No symbol) [0x0x7ff675b586a3]
+	(No symbol) [0x0x7ff675b21791]
+	(No symbol) [0x0x7ff675b22523]
+	GetHandleVerifier [0x0x7ff675ff684d+3059501]
+	GetHandleVerifier [0x0x7ff675ff0c0d+3035885]
+	GetHandleVerifier [0x0x7ff676010400+3164896]
+	GetHandleVerifier [0x0x7ff675d38c3e+185118]
+	GetHandleVerifier [0x0x7ff675d4054f+216111]
+	GetHandleVerifier [0x0x7ff675d272e4+113092]
+	GetHandleVerifier [0x0x7ff675d27499+113529]
+	GetHandleVerifier [0x0x7ff675d0e298+10616]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.11
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (28-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 81901200 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 10528201 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044400 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044800 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80044801 (28-Jul-2025 - 28-Jul-2025)
+Request berhasil untuk 80539301 (28-Jul-2025 - 28-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 10528201, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Browser ditutup.
+Proses upload dan unduh APEX gagal.
+=== Mulai Proses Praprocess Laporan Danamon dari hasil APEX ===
+Proses hapus data Open AWB di file master...
+Hasil berhasil disimpan ke: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan Updated Open AWB dari APEX ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Path New Danamon 00 tidak ditemukan di tracker_summary.csv
+Path New Danamon 01 tidak ditemukan di tracker_summary.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Mulai proses ekstraksi data RT AWB Danamon dari hasil APEX...
+Hasil disimpan ke: D:/RYAN/1. References/Danamon/RT REPORT.csv
+Proses hapus data RT AWB dari hasil APEX...
+File berhasil disimpan setelah menghapus baris: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 290725_6436713.csv
+Proses RT AWB Danamon selesai.
+Semua proses praprocess Danamon selesai.
+Membuka Thunderbird dan menyegarkan inbox...
+Thunderbird dibuka...
+Memulai proses refresh...
+Batas waktu 5 menit tercapai, proses menunggu refresh dihentikan..
+Mencari email dengan subjek 'OS CARD JNE'...
+Sudah baca 10 email dari belakang...
+Subject email: RE: OS CARD JNE 25/07/2025
+Attachment disimpan: d:/RYAN/1. References/Danamon\OS JNE.zip
+Diekstrak (ZIP): OS CC JNE.xlsx
+Diekstrak (ZIP): OS DBANK JNE.xlsx
+File arsip dihapus: d:/RYAN/1. References/Danamon\OS JNE.zip
+Total attachment disimpan: 1
+Email OS ditemukan dan attachment disimpan.
+Mencari email dengan subjek 'DATA PICKUP JNE'...
+Sudah baca 10 email dari belakang...
+Semua file di folder 'd:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt' berhasil dihapus.
+Subject email: RE: DATA PICKUP JNE 25/07/25
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_25072025_164226.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_25072025_164226.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_25072025_164226.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_25072025_164224.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_25072025_164224.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_25072025_164224.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 2507.7z
+Diekstrak (7Z): ['KU AMEX JNE.txt', 'KU VIMAS JNE.txt']
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 2507.7z
+Total attachment disimpan: 3
+Email Pickup ditemukan dan attachment disimpan.
+Memproses data pickup dari folder 'Mentah Txt'...
+Data pickup ditambahkan ke: d:\RYAN\1. References\Danamon\Ref Pickup\Data Pickup\Pickup Danamon July 2025.csv
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: OS CC JNE 250725.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: Report Pickup Danamon Juli 2025.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+Fixed-width file disimpan di: d:\RYAN\3. Reports\Danamon\Report Sukses\REPORT SUKSES KK 29072025.txt
+Menunggu WhatsApp Web terbuka...
+
+Mengirim ke: Zaini → Raw Report.csv
+❌ Gagal kirim ke Zaini: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff675d1e935+77845]
+	GetHandleVerifier [0x0x7ff675d1e990+77936]
+	(No symbol) [0x0x7ff675ad9cda]
+	(No symbol) [0x0x7ff675b306aa]
+	(No symbol) [0x0x7ff675b3095c]
+	(No symbol) [0x0x7ff675b83d07]
+	(No symbol) [0x0x7ff675b5890f]
+	(No symbol) [0x0x7ff675b80b07]
+	(No symbol) [0x0x7ff675b586a3]
+	(No symbol) [0x0x7ff675b21791]
+	(No symbol) [0x0x7ff675b22523]
+	GetHandleVerifier [0x0x7ff675ff684d+3059501]
+	GetHandleVerifier [0x0x7ff675ff0c0d+3035885]
+	GetHandleVerifier [0x0x7ff676010400+3164896]
+	GetHandleVerifier [0x0x7ff675d38c3e+185118]
+	GetHandleVerifier [0x0x7ff675d4054f+216111]
+	GetHandleVerifier [0x0x7ff675d272e4+113092]
+	GetHandleVerifier [0x0x7ff675d27499+113529]
+	GetHandleVerifier [0x0x7ff675d0e298+10616]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Mengirim ke: Zaini → Report Pickup Danamon Juli 2025.xlsx
+❌ Gagal kirim ke Zaini: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff675d1e935+77845]
+	GetHandleVerifier [0x0x7ff675d1e990+77936]
+	(No symbol) [0x0x7ff675ad9cda]
+	(No symbol) [0x0x7ff675b306aa]
+	(No symbol) [0x0x7ff675b3095c]
+	(No symbol) [0x0x7ff675b83d07]
+	(No symbol) [0x0x7ff675b5890f]
+	(No symbol) [0x0x7ff675b80b07]
+	(No symbol) [0x0x7ff675b586a3]
+	(No symbol) [0x0x7ff675b21791]
+	(No symbol) [0x0x7ff675b22523]
+	GetHandleVerifier [0x0x7ff675ff684d+3059501]
+	GetHandleVerifier [0x0x7ff675ff0c0d+3035885]
+	GetHandleVerifier [0x0x7ff676010400+3164896]
+	GetHandleVerifier [0x0x7ff675d38c3e+185118]
+	GetHandleVerifier [0x0x7ff675d4054f+216111]
+	GetHandleVerifier [0x0x7ff675d272e4+113092]
+	GetHandleVerifier [0x0x7ff675d27499+113529]
+	GetHandleVerifier [0x0x7ff675d0e298+10616]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Mengirim ke: Zaini → OS CC JNE 250725.xlsx
+❌ Gagal kirim ke Zaini: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff675d1e935+77845]
+	GetHandleVerifier [0x0x7ff675d1e990+77936]
+	(No symbol) [0x0x7ff675ad9cda]
+	(No symbol) [0x0x7ff675b306aa]
+	(No symbol) [0x0x7ff675b3095c]
+	(No symbol) [0x0x7ff675b83d07]
+	(No symbol) [0x0x7ff675b5890f]
+	(No symbol) [0x0x7ff675b80b07]
+	(No symbol) [0x0x7ff675b586a3]
+	(No symbol) [0x0x7ff675b21791]
+	(No symbol) [0x0x7ff675b22523]
+	GetHandleVerifier [0x0x7ff675ff684d+3059501]
+	GetHandleVerifier [0x0x7ff675ff0c0d+3035885]
+	GetHandleVerifier [0x0x7ff676010400+3164896]
+	GetHandleVerifier [0x0x7ff675d38c3e+185118]
+	GetHandleVerifier [0x0x7ff675d4054f+216111]
+	GetHandleVerifier [0x0x7ff675d272e4+113092]
+	GetHandleVerifier [0x0x7ff675d27499+113529]
+	GetHandleVerifier [0x0x7ff675d0e298+10616]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Mengirim ke: Zaini → REPORT SUKSES KK 29072025.txt
+❌ Gagal kirim ke Zaini: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff675d1e935+77845]
+	GetHandleVerifier [0x0x7ff675d1e990+77936]
+	(No symbol) [0x0x7ff675ad9cda]
+	(No symbol) [0x0x7ff675b306aa]
+	(No symbol) [0x0x7ff675b3095c]
+	(No symbol) [0x0x7ff675b83d07]
+	(No symbol) [0x0x7ff675b5890f]
+	(No symbol) [0x0x7ff675b80b07]
+	(No symbol) [0x0x7ff675b586a3]
+	(No symbol) [0x0x7ff675b21791]
+	(No symbol) [0x0x7ff675b22523]
+	GetHandleVerifier [0x0x7ff675ff684d+3059501]
+	GetHandleVerifier [0x0x7ff675ff0c0d+3035885]
+	GetHandleVerifier [0x0x7ff676010400+3164896]
+	GetHandleVerifier [0x0x7ff675d38c3e+185118]
+	GetHandleVerifier [0x0x7ff675d4054f+216111]
+	GetHandleVerifier [0x0x7ff675d272e4+113092]
+	GetHandleVerifier [0x0x7ff675d27499+113529]
+	GetHandleVerifier [0x0x7ff675d0e298+10616]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Semua pengiriman selesai.
+=== Mulai Praprocess Laporan Generali, Kalog, LSIN & Smartfren ===
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 290725_6436713.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 290725_6436713.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 290725_6436713.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 290725_6436713.csv
+Perbarui isi tabel: Table1
+Tabel di 'Sheet1' berhasil diperbarui dengan data dari: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 290725_6436713.csv
+Membuka Excel...
+
+Membuka file: 2. Query Update Status Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 2. Query Update Status.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Excel sedang sibuk... tunggu sebentar.
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report KALOG.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report LSIN.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Smartfren.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+
+=== TASK TABLE TRACKER ===
+Task                 Preprocess Request    Download   Praprocess
+Open Danamon         True       True       True       True      
+Open Generali        True       True       True       True      
+Open Kalog           True       True       True       True      
+Open LSIN            True       True       True       True      
+Open Smartfren       True       True       True       True      
+RT Danamon           True       True       True       True      
+New Danamon 81635700 False      True       True       False     
+New Danamon 81635701 False      True       False      False     
+New Kalog            False      True       True       True      
+New LSIN             False      True       False      True      
+New Smartfren 10528201 False      True       False      True      
+New Smartfren 80029200 False      True       True       True      
+New Smartfren 80044400 False      True       False      True      
+New Smartfren 80044800 False      True       False      True      
+New Smartfren 80044801 False      True       False      True      
+New Smartfren 80055900 False      True       True       True      
+New Smartfren 80539301 False      True       False      True      
+New Smartfren 80539308 False      True       True       True      
+Tracker summary disimpan ke: data/tracker\tracker_summary.csv
+Semua proses selesai.
+
+
+=== Log started at 2025-07-29 16:09:59 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: c:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Generali.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Kalog.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB LSIN.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Smartfren.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan RT AWB Danamon.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 290725.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 1 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 290725.csv
+Mengunggah dan mengunduh data dari Apex...
+Semua customer selesai diproses.
+Proses upload dan unduh APEX gagal.
+Path Open Danamon tidak ditemukan di tracker_summary.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Semua proses praprocess Danamon selesai.
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+
+Semua file telah diproses.
+Traceback (most recent call last):
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 104, in <module>
+    main(tracker, task_paths)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 84, in main
+    refresh_excel_workbooks(["d:\\RYAN\\2. Queries\\Query Danamon.xlsx"])
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\DELL\Desktop\ReportApp\workflows\file_ops.py", line 240, in refresh_excel_workbooks
+    wb.RefreshAll()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32com\gen_py\00020813-0000-0000-C000-000000000046x0x1x9.py", line 46846, in RefreshAll
+    return self._oleobj_.InvokeTypes(1452, LCID, 1, (24, 0), (),)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+
+=== Log started at 2025-07-29 16:10:49 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: c:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 290725.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 1 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 290725.csv
+Mengunggah dan mengunduh data dari Apex...
+Semua customer selesai diproses.
+Proses upload dan unduh APEX gagal.
+Path Open Danamon tidak ditemukan di tracker_summary.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Semua proses praprocess Danamon selesai.
+Traceback (most recent call last):
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32com\client\dynamic.py", line 81, in _GetGoodDispatch
+    IDispatch = pythoncom.connect(IDispatch)
+pywintypes.com_error: (-2147221021, 'Operation unavailable', None, None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 104, in <module>
+    main(tracker, task_paths)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 84, in main
+    refresh_excel_workbooks(["d:\\RYAN\\2. Queries\\Query Danamon.xlsx"])
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\DELL\Desktop\ReportApp\workflows\file_ops.py", line 229, in refresh_excel_workbooks
+    close_all_excel_instances()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\DELL\Desktop\ReportApp\workflows\file_ops.py", line 189, in close_all_excel_instances
+    excel = win32com.client.Dispatch("Excel.Application")
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32com\client\__init__.py", line 116, in Dispatch
+    dispatch, userName = dynamic._GetGoodDispatchAndUserName(dispatch, userName, clsctx)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32com\client\dynamic.py", line 101, in _GetGoodDispatchAndUserName
+    return (_GetGoodDispatch(IDispatch, clsctx), userName)
+            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32com\client\dynamic.py", line 83, in _GetGoodDispatch
+    IDispatch = pythoncom.CoCreateInstance(
+        IDispatch, None, clsctx, pythoncom.IID_IDispatch
+    )
+KeyboardInterrupt
+
+
+=== Log started at 2025-07-29 16:14:19 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: c:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 290725.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 1 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 290725.csv
+Mengunggah dan mengunduh data dari Apex...
+Semua customer selesai diproses.
+Proses upload dan unduh APEX gagal.
+Path Open Danamon tidak ditemukan di tracker_summary.csv
+Hapus duplikat berdasarkan AWB di file master...
+Traceback (most recent call last):
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 104, in <module>
+    main(tracker, task_paths)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 75, in main
+    remove_duplicates_by_column(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        input_path=file_master,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        output_format="csv"
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\DELL\Desktop\ReportApp\workflows\data_ops.py", line 260, in remove_duplicates_by_column
+    df_cleaned.to_csv(output_path, index=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3967, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 270, in save
+    self._save()
+    ~~~~~~~~~~^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 275, in _save
+    self._save_body()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 313, in _save_body
+    self._save_chunk(start_i, end_i)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 324, in _save_chunk
+    libwriters.write_csv_rows(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<3 lines>...
+        self.writer,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "writers.pyx", line 73, in pandas._libs.writers.write_csv_rows
+KeyboardInterrupt
+
+
+=== Log started at 2025-07-29 16:16:18 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: c:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 290725.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Tidak ada data AWB yang valid ditemukan.
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 0 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Tidak ada file CSV untuk digabungkan.
+Mengunggah dan mengunduh data dari Apex...
+Semua customer selesai diproses.
+Proses upload dan unduh APEX gagal.
+Path Open Danamon tidak ditemukan di tracker_summary.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Semua proses praprocess Danamon selesai.
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+
+Semua file telah diproses.
+Traceback (most recent call last):
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 104, in <module>
+    main(tracker, task_paths)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 84, in main
+    refresh_excel_workbooks(["d:\\RYAN\\2. Queries\\Query Danamon.xlsx"])
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\DELL\Desktop\ReportApp\workflows\file_ops.py", line 237, in refresh_excel_workbooks
+    wb = excel.Workbooks.Open(str(excel_file))
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32com\gen_py\00020813-0000-0000-C000-000000000046x0x1x9.py", line 41275, in Open
+    ret = self._oleobj_.InvokeTypes(1923, LCID, 1, (13, 0), ((8, 1), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17)),Filename
+    	, UpdateLinks, ReadOnly, Format, Password, WriteResPassword
+    	, IgnoreReadOnlyRecommended, Origin, Delimiter, Editable, Notify
+    	, Converter, AddToMru, Local, CorruptLoad)
+KeyboardInterrupt
+
+
+=== Log started at 2025-07-29 16:18:32 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: c:\Users\DELL\Desktop\ReportApp\data
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Tidak ada data AWB yang valid ditemukan.
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 0 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Tidak ada file CSV untuk digabungkan.
+Mengunggah dan mengunduh data dari Apex...
+Semua customer selesai diproses.
+Proses upload dan unduh APEX berhasil.
+Path Open Danamon tidak ditemukan di tracker_summary.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Semua proses praprocess Danamon selesai.
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Terjadi kesalahan: (-2147023170, 'The remote procedure call failed.', None, None)
+Traceback (most recent call last):
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 104, in <module>
+    main(tracker, task_paths)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\DELL\Desktop\ReportApp\danamon.py", line 84, in main
+    refresh_excel_workbooks(["d:\\RYAN\\2. Queries\\Query Danamon.xlsx"])
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\DELL\Desktop\ReportApp\workflows\file_ops.py", line 252, in refresh_excel_workbooks
+    excel.Quit()
+    ~~~~~~~~~~^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32com\gen_py\00020813-0000-0000-C000-000000000046x0x1x9.py", line 44718, in Quit
+    return self._oleobj_.InvokeTypes(302, LCID, 1, (24, 0), (),)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pywintypes.com_error: (-2147023174, 'The RPC server is unavailable.', None, None)
+
+
+=== Log started at 2025-07-29 16:20:17 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: c:\Users\DELL\Desktop\ReportApp\data
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 1 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Danamon 290725.csv
+Mengunggah dan mengunduh data dari Apex...
+Semua customer selesai diproses.
+Proses upload dan unduh APEX berhasil.
+Path Open Danamon tidak ditemukan di tracker_summary.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Semua proses praprocess Danamon selesai.
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Excel sedang sibuk... tunggu sebentar.
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+Fixed-width file disimpan di: d:\RYAN\3. Reports\Danamon\Report Sukses\REPORT SUKSES KK 29072025.txt
+Menunggu WhatsApp Web terbuka...
+
+Mengirim ke: Zaini → REPORT SUKSES KK 29072025.txt
+❌ Gagal kirim ke Zaini: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.158)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff675d1e935+77845]
+	GetHandleVerifier [0x0x7ff675d1e990+77936]
+	(No symbol) [0x0x7ff675ad9cda]
+	(No symbol) [0x0x7ff675ac5f35]
+	(No symbol) [0x0x7ff675aeaabe]
+	(No symbol) [0x0x7ff675b5feb5]
+	(No symbol) [0x0x7ff675b80432]
+	(No symbol) [0x0x7ff675b586a3]
+	(No symbol) [0x0x7ff675b21791]
+	(No symbol) [0x0x7ff675b22523]
+	GetHandleVerifier [0x0x7ff675ff684d+3059501]
+	GetHandleVerifier [0x0x7ff675ff0c0d+3035885]
+	GetHandleVerifier [0x0x7ff676010400+3164896]
+	GetHandleVerifier [0x0x7ff675d38c3e+185118]
+	GetHandleVerifier [0x0x7ff675d4054f+216111]
+	GetHandleVerifier [0x0x7ff675d272e4+113092]
+	GetHandleVerifier [0x0x7ff675d27499+113529]
+	GetHandleVerifier [0x0x7ff675d0e298+10616]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Semua pengiriman selesai.
+
+
+=== Log started at 2025-07-29 16:31:37 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: c:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Danamon 290725.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 1 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Danamon 290725.csv
+Mengunggah dan mengunduh data dari Apex...
+⏳ Masih ada task yang belum selesai.
+Mencoba koneksi ke APEX host: 10.18.2.35
+Login ke sistem...
+Mengunggah file: Update Danamon 290725.csv
+File dikirim. Tunggu respon server...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: Update Danamon 290725_6437420.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Danamon 290725_6437420.csv (291444 bytes)
+Login ke sistem...
+Browser ditutup.
+⏳ Masih ada task yang belum selesai.
+Mencoba koneksi ke APEX host: 10.18.2.16
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Browser ditutup.
+⏳ Masih ada task yang belum selesai.
+Mencoba koneksi ke APEX host: 10.18.2.12
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Browser ditutup.
+⏳ Masih ada task yang belum selesai.
+Mencoba koneksi ke APEX host: 10.18.2.11
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Browser ditutup.
+Proses upload dan unduh APEX gagal.
+Proses hapus data Open AWB di file master...
+Hasil berhasil disimpan ke: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan Updated Open AWB dari APEX ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Semua proses praprocess Danamon selesai.
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Excel sedang sibuk... tunggu sebentar.
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+Fixed-width file disimpan di: d:\RYAN\3. Reports\Danamon\Report Sukses\REPORT SUKSES KK 29072025.txt
+Menunggu WhatsApp Web terbuka...
+
+Mengirim ke: Zaini → REPORT SUKSES KK 29072025.txt
+❌ Gagal kirim ke Zaini: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.158)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff675d1e935+77845]
+	GetHandleVerifier [0x0x7ff675d1e990+77936]
+	(No symbol) [0x0x7ff675ad9cda]
+	(No symbol) [0x0x7ff675ac5f35]
+	(No symbol) [0x0x7ff675aeaabe]
+	(No symbol) [0x0x7ff675b5feb5]
+	(No symbol) [0x0x7ff675b80432]
+	(No symbol) [0x0x7ff675b586a3]
+	(No symbol) [0x0x7ff675b21791]
+	(No symbol) [0x0x7ff675b22523]
+	GetHandleVerifier [0x0x7ff675ff684d+3059501]
+	GetHandleVerifier [0x0x7ff675ff0c0d+3035885]
+	GetHandleVerifier [0x0x7ff676010400+3164896]
+	GetHandleVerifier [0x0x7ff675d38c3e+185118]
+	GetHandleVerifier [0x0x7ff675d4054f+216111]
+	GetHandleVerifier [0x0x7ff675d272e4+113092]
+	GetHandleVerifier [0x0x7ff675d27499+113529]
+	GetHandleVerifier [0x0x7ff675d0e298+10616]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Semua pengiriman selesai.
+
+
+=== Log started at 2025-07-30 07:00:02 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: C:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Danamon 290725.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Mengekstrak Open AWB untuk Open Generali...
+Excel dibaca: Generali Juli 2025.xlsx
+Excel dibaca: Generali Juni 2025.xlsx
+Excel dibaca: Generali Mei 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Generali.csv
+Mengekstrak Open AWB untuk Open Kalog...
+Excel dibaca: Report KALOG 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Kalog.csv
+Mengekstrak Open AWB untuk Open LSIN...
+Excel dibaca: Report LSIN 2025 (23 MAY 25).xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB LSIN.csv
+Mengekstrak Open AWB untuk Open Smartfren...
+REPORT SMARTFREN _ 80539308.xlsx - Sheet: 80539308 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet3 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80055900.xlsx - Sheet: 80055900 dibaca.
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Smartfren.csv
+Mengekstrak RT AWB dari berbagai sumber...
+Memproses RT AWB RT Danamon...
+File RT Danamon berhasil dibaca!
+RT AWB RT Danamon disimpan ke: c:/Users/DELL/Desktop/ReportApp/data/RT AWB Danamon.csv
+Proses RT Danamon selesai.
+
+Mengekstrak New AWB dari berbagai sumber...
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 6 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+Open AWB Generali.csv berhasil dimuat.
+Open AWB Kalog.csv berhasil dimuat.
+Open AWB LSIN.csv berhasil dimuat.
+Open AWB Smartfren.csv berhasil dimuat.
+RT AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 300725.csv
+Mengunggah dan mengunduh data dari Apex...
+Mencoba koneksi ke APEX host: 10.18.2.35
+Login ke sistem...
+Mengunggah file: Update Ryan 300725.csv
+File dikirim. Tunggu respon server...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: Update Ryan 300725_6437754.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 300725_6437754.csv (772241 bytes)
+Login ke sistem...
+Request berhasil untuk 81635700 (29-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 81635701 (29-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 81728700 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 81901200 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 10528201 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80029200 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044400 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044800 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044801 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80055900 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80539301 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80539308 (29-Jul-2025 - 29-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81635700_250729_250730_6437756_6437756.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81635700_250729_250730_6437756_6437756.csv (48344 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81728700_250729_250729_6437758_6437758.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81728700_250729_250729_6437758_6437758.csv (4625 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_CGK000_10528201_250729_250729_6437760_6437760.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_CGK000_10528201_250729_250729_6437760_6437760.csv (33412 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80029200_250729_250729_6437761_6437761.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80029200_250729_250729_6437761_6437761.csv (37098 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80055900_250729_250729_6437765_6437765.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80055900_250729_250729_6437765_6437765.csv (5303 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80539308_250729_250729_6437767_6437767.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80539308_250729_250729_6437767_6437767.csv (8252 bytes)
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.16
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (29-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 81901200 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044400 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044800 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044801 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80539301 (29-Jul-2025 - 29-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.12
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (29-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 81901200 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044400 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044800 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044801 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80539301 (29-Jul-2025 - 29-Jul-2025)
+Error di host 10.18.2.12: Message: stale element reference: stale element not found
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6398de415+77285]
+	GetHandleVerifier [0x0x7ff6398de470+77376]
+	(No symbol) [0x0x7ff6396a9a6a]
+	(No symbol) [0x0x7ff6396bfec4]
+	(No symbol) [0x0x7ff6396be9a3]
+	(No symbol) [0x0x7ff6396b2181]
+	(No symbol) [0x0x7ff6396b002f]
+	(No symbol) [0x0x7ff6396b44cc]
+	(No symbol) [0x0x7ff6396b459f]
+	(No symbol) [0x0x7ff6397025ed]
+	(No symbol) [0x0x7ff6396f33c3]
+	(No symbol) [0x0x7ff63972860a]
+	(No symbol) [0x0x7ff6396f2d06]
+	(No symbol) [0x0x7ff639728820]
+	(No symbol) [0x0x7ff63975087f]
+	(No symbol) [0x0x7ff6397283e3]
+	(No symbol) [0x0x7ff6396f1521]
+	(No symbol) [0x0x7ff6396f22b3]
+	GetHandleVerifier [0x0x7ff639bc1efd+3107021]
+	GetHandleVerifier [0x0x7ff639bbc29d+3083373]
+	GetHandleVerifier [0x0x7ff639bdbedd+3213485]
+	GetHandleVerifier [0x0x7ff6398f884e+184862]
+	GetHandleVerifier [0x0x7ff63990055f+216879]
+	GetHandleVerifier [0x0x7ff6398e7084+113236]
+	GetHandleVerifier [0x0x7ff6398e7239+113673]
+	GetHandleVerifier [0x0x7ff6398ce298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.11
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (29-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 81901200 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044400 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044800 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80044801 (29-Jul-2025 - 29-Jul-2025)
+Request berhasil untuk 80539301 (29-Jul-2025 - 29-Jul-2025)
+Error di host 10.18.2.11: Message: stale element reference: stale element not found
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6398de415+77285]
+	GetHandleVerifier [0x0x7ff6398de470+77376]
+	(No symbol) [0x0x7ff6396a9a6a]
+	(No symbol) [0x0x7ff6396bfec4]
+	(No symbol) [0x0x7ff6396be9a3]
+	(No symbol) [0x0x7ff6396b2181]
+	(No symbol) [0x0x7ff6396b002f]
+	(No symbol) [0x0x7ff6396b44cc]
+	(No symbol) [0x0x7ff6396b459f]
+	(No symbol) [0x0x7ff6397025ed]
+	(No symbol) [0x0x7ff6396f33c3]
+	(No symbol) [0x0x7ff63972860a]
+	(No symbol) [0x0x7ff6396f2d06]
+	(No symbol) [0x0x7ff639728820]
+	(No symbol) [0x0x7ff63975087f]
+	(No symbol) [0x0x7ff6397283e3]
+	(No symbol) [0x0x7ff6396f1521]
+	(No symbol) [0x0x7ff6396f22b3]
+	GetHandleVerifier [0x0x7ff639bc1efd+3107021]
+	GetHandleVerifier [0x0x7ff639bbc29d+3083373]
+	GetHandleVerifier [0x0x7ff639bdbedd+3213485]
+	GetHandleVerifier [0x0x7ff6398f884e+184862]
+	GetHandleVerifier [0x0x7ff63990055f+216879]
+	GetHandleVerifier [0x0x7ff6398e7084+113236]
+	GetHandleVerifier [0x0x7ff6398e7239+113673]
+	GetHandleVerifier [0x0x7ff6398ce298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Browser ditutup.
+Proses upload dan unduh APEX gagal.
+=== Mulai Proses Praprocess Laporan Danamon dari hasil APEX ===
+Proses hapus data Open AWB di file master...
+Hasil berhasil disimpan ke: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan Updated Open AWB dari APEX ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Path New Danamon 00 tidak ditemukan di tracker_summary.csv
+Path New Danamon 01 tidak ditemukan di tracker_summary.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Mulai proses ekstraksi data RT AWB Danamon dari hasil APEX...
+Hasil disimpan ke: D:/RYAN/1. References/Danamon/RT REPORT.csv
+Proses hapus data RT AWB dari hasil APEX...
+File berhasil disimpan setelah menghapus baris: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 300725_6437754.csv
+Proses RT AWB Danamon selesai.
+Semua proses praprocess Danamon selesai.
+Membuka Thunderbird dan menyegarkan inbox...
+Thunderbird dibuka...
+Memulai proses refresh...
+Batas waktu 5 menit tercapai, proses menunggu refresh dihentikan..
+Mencari email dengan subjek 'OS CARD JNE'...
+Sudah baca 10 email dari belakang...
+Subject email: RE: OS CARD JNE 28/07/2025
+Attachment disimpan: d:/RYAN/1. References/Danamon\OS JNE.zip
+Diekstrak (ZIP): OS CC JNE.xlsx
+Diekstrak (ZIP): OS DBANK JNE.xlsx
+File arsip dihapus: d:/RYAN/1. References/Danamon\OS JNE.zip
+Total attachment disimpan: 1
+Email OS ditemukan dan attachment disimpan.
+Mencari email dengan subjek 'DATA PICKUP JNE'...
+Sudah baca 10 email dari belakang...
+Semua file di folder 'd:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt' berhasil dihapus.
+Subject email: RE: DATA PICKUP JNE 28/07/25
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_28072025_171841.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_28072025_171841.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_28072025_171841.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_28072025_171839.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_28072025_171839.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_28072025_171839.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 2807.7z
+Diekstrak (7Z): ['KU AMEX JNE.txt', 'KU VIMAS JNE.txt']
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 2807.7z
+Total attachment disimpan: 3
+Email Pickup ditemukan dan attachment disimpan.
+Memproses data pickup dari folder 'Mentah Txt'...
+Data pickup ditambahkan ke: d:\RYAN\1. References\Danamon\Ref Pickup\Data Pickup\Pickup Danamon July 2025.csv
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: OS CC JNE 280725.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: Report Pickup Danamon Juli 2025.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+Tidak ada data yang bisa dikonversi. File tidak dibuat.
+Menunggu WhatsApp Web terbuka...
+
+Mengirim ke: Zaini → Raw Report.csv
+Menunggu status terkirim...
+Terkirim & status terdeteksi: Raw Report.csv
+Mengirim ke: Zaini → Report Pickup Danamon Juli 2025.xlsx
+Menunggu status terkirim...
+Terkirim & status terdeteksi: Report Pickup Danamon Juli 2025.xlsx
+Mengirim ke: Zaini → OS CC JNE 280725.xlsx
+Menunggu status terkirim...
+Terkirim & status terdeteksi: OS CC JNE 280725.xlsx
+Semua pengiriman selesai.
+=== Mulai Praprocess Laporan Generali, Kalog, LSIN & Smartfren ===
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 300725_6437754.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 300725_6437754.csv
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 300725_6437754.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 300725_6437754.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 300725_6437754.csv
+Perbarui isi tabel: Table1
+Tabel di 'Sheet1' berhasil diperbarui dengan data dari: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 300725_6437754.csv
+Membuka Excel...
+
+Membuka file: 2. Query Update Status Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Terjadi kesalahan: (-2147417848, 'The object invoked has disconnected from its clients.', None, None)
+
+Semua file telah diproses.
+
+=== TASK TABLE TRACKER ===
+Task                 Preprocess Request    Download   Praprocess
+Open Danamon         True       True       True       True      
+Open Generali        True       True       True       True      
+Open Kalog           True       True       True       True      
+Open LSIN            True       True       True       True      
+Open Smartfren       True       True       True       True      
+RT Danamon           True       True       True       True      
+New Danamon 81635700 False      True       True       False     
+New Danamon 81635701 False      True       False      False     
+New Kalog            False      True       True       True      
+New LSIN             False      True       False      True      
+New Smartfren 10528201 False      True       True       True      
+New Smartfren 80029200 False      True       True       True      
+New Smartfren 80044400 False      True       False      True      
+New Smartfren 80044800 False      True       False      True      
+New Smartfren 80044801 False      True       False      True      
+New Smartfren 80055900 False      True       True       True      
+New Smartfren 80539301 False      True       False      True      
+New Smartfren 80539308 False      True       True       True      
+Tracker summary disimpan ke: data/tracker\tracker_summary.csv
+Semua proses selesai.
+
+
+=== Log started at 2025-07-30 16:33:20 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: C:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Generali.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Kalog.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB LSIN.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Smartfren.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan RT AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 300725.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 1 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Danamon 300725.csv
+Mengunggah dan mengunduh data dari Apex...
+Mencoba koneksi ke APEX host: 10.18.2.35
+Login ke sistem...
+Mengunggah file: Update Danamon 300725.csv
+File dikirim. Tunggu respon server...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: Update Danamon 300725_6438640.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Danamon 300725_6438640.csv (295268 bytes)
+Login ke sistem...
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.16
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.12
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.11
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Browser ditutup.
+Proses upload dan unduh APEX gagal.
+Proses hapus data Open AWB di file master...
+Hasil berhasil disimpan ke: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan Updated Open AWB dari APEX ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Semua proses praprocess Danamon selesai.
+Terjadi error: Excel.Application.Workbooks
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Terjadi kesalahan: Excel.Application.Workbooks
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\ReportApp\danamon.py", line 104, in <module>
+    main(tracker, task_paths)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\Desktop\ReportApp\danamon.py", line 84, in main
+    refresh_excel_workbooks(["d:\\RYAN\\2. Queries\\Query Danamon.xlsx"])
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\Desktop\ReportApp\workflows\file_ops.py", line 252, in refresh_excel_workbooks
+    excel.Quit()
+    ^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32com\client\dynamic.py", line 631, in __getattr__
+    raise AttributeError(f"{self._username_}.{attr}")
+AttributeError: Excel.Application.Quit
+
+
+=== Log started at 2025-07-31 07:00:02 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: C:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Danamon 300725b.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Mengekstrak Open AWB untuk Open Generali...
+Excel dibaca: Generali Juli 2025.xlsx
+Excel dibaca: Generali Juni 2025.xlsx
+Excel dibaca: Generali Mei 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Generali.csv
+Mengekstrak Open AWB untuk Open Kalog...
+Excel dibaca: Report KALOG 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Kalog.csv
+Mengekstrak Open AWB untuk Open LSIN...
+Excel dibaca: Report LSIN 2025 (23 MAY 25).xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB LSIN.csv
+Mengekstrak Open AWB untuk Open Smartfren...
+REPORT SMARTFREN _ 80539308.xlsx - Sheet: 80539308 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet3 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80055900.xlsx - Sheet: 80055900 dibaca.
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Smartfren.csv
+Mengekstrak RT AWB dari berbagai sumber...
+Memproses RT AWB RT Danamon...
+File RT Danamon berhasil dibaca!
+RT AWB RT Danamon disimpan ke: c:/Users/DELL/Desktop/ReportApp/data/RT AWB Danamon.csv
+Proses RT Danamon selesai.
+
+Mengekstrak New AWB dari berbagai sumber...
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 6 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+Open AWB Generali.csv berhasil dimuat.
+Open AWB Kalog.csv berhasil dimuat.
+Open AWB LSIN.csv berhasil dimuat.
+Open AWB Smartfren.csv berhasil dimuat.
+RT AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 310725.csv
+Mengunggah dan mengunduh data dari Apex...
+Mencoba koneksi ke APEX host: 10.18.2.35
+Login ke sistem...
+Mengunggah file: Update Ryan 310725.csv
+File dikirim. Tunggu respon server...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: Update Ryan 310725_6438936.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 310725_6438936.csv (971131 bytes)
+Login ke sistem...
+Request berhasil untuk 81635700 (30-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 81635701 (30-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 81728700 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 81901200 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 10528201 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80029200 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044400 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044800 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044801 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80055900 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80539301 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80539308 (30-Jul-2025 - 30-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81635700_250730_250731_6438945_6438945.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81635700_250730_250731_6438945_6438945.csv (13005 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81728700, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_CGK000_10528201_250730_250730_6438952_6438952.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_CGK000_10528201_250730_250730_6438952_6438952.csv (32410 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+API error (500 dst) attempt 1/3 → 80029200
+Request berhasil untuk 80029200 (30-Jul-2025 - 30-Jul-2025)
+↻ Request ulang berhasil, akan coba download lagi...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80029200: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fa29e415+77285]
+	GetHandleVerifier [0x0x7ff7fa29e470+77376]
+	(No symbol) [0x0x7ff7fa069a6a]
+	(No symbol) [0x0x7ff7fa0c0406]
+	(No symbol) [0x0x7ff7fa0c06bc]
+	(No symbol) [0x0x7ff7fa113ac7]
+	(No symbol) [0x0x7ff7fa0e864f]
+	(No symbol) [0x0x7ff7fa11087f]
+	(No symbol) [0x0x7ff7fa0e83e3]
+	(No symbol) [0x0x7ff7fa0b1521]
+	(No symbol) [0x0x7ff7fa0b22b3]
+	GetHandleVerifier [0x0x7ff7fa581efd+3107021]
+	GetHandleVerifier [0x0x7ff7fa57c29d+3083373]
+	GetHandleVerifier [0x0x7ff7fa59bedd+3213485]
+	GetHandleVerifier [0x0x7ff7fa2b884e+184862]
+	GetHandleVerifier [0x0x7ff7fa2c055f+216879]
+	GetHandleVerifier [0x0x7ff7fa2a7084+113236]
+	GetHandleVerifier [0x0x7ff7fa2a7239+113673]
+	GetHandleVerifier [0x0x7ff7fa28e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044400: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fa29e415+77285]
+	GetHandleVerifier [0x0x7ff7fa29e470+77376]
+	(No symbol) [0x0x7ff7fa069a6a]
+	(No symbol) [0x0x7ff7fa0c0406]
+	(No symbol) [0x0x7ff7fa0c06bc]
+	(No symbol) [0x0x7ff7fa113ac7]
+	(No symbol) [0x0x7ff7fa0e864f]
+	(No symbol) [0x0x7ff7fa11087f]
+	(No symbol) [0x0x7ff7fa0e83e3]
+	(No symbol) [0x0x7ff7fa0b1521]
+	(No symbol) [0x0x7ff7fa0b22b3]
+	GetHandleVerifier [0x0x7ff7fa581efd+3107021]
+	GetHandleVerifier [0x0x7ff7fa57c29d+3083373]
+	GetHandleVerifier [0x0x7ff7fa59bedd+3213485]
+	GetHandleVerifier [0x0x7ff7fa2b884e+184862]
+	GetHandleVerifier [0x0x7ff7fa2c055f+216879]
+	GetHandleVerifier [0x0x7ff7fa2a7084+113236]
+	GetHandleVerifier [0x0x7ff7fa2a7239+113673]
+	GetHandleVerifier [0x0x7ff7fa28e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044800: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fa29e415+77285]
+	GetHandleVerifier [0x0x7ff7fa29e470+77376]
+	(No symbol) [0x0x7ff7fa069a6a]
+	(No symbol) [0x0x7ff7fa0c0406]
+	(No symbol) [0x0x7ff7fa0c06bc]
+	(No symbol) [0x0x7ff7fa113ac7]
+	(No symbol) [0x0x7ff7fa0e864f]
+	(No symbol) [0x0x7ff7fa11087f]
+	(No symbol) [0x0x7ff7fa0e83e3]
+	(No symbol) [0x0x7ff7fa0b1521]
+	(No symbol) [0x0x7ff7fa0b22b3]
+	GetHandleVerifier [0x0x7ff7fa581efd+3107021]
+	GetHandleVerifier [0x0x7ff7fa57c29d+3083373]
+	GetHandleVerifier [0x0x7ff7fa59bedd+3213485]
+	GetHandleVerifier [0x0x7ff7fa2b884e+184862]
+	GetHandleVerifier [0x0x7ff7fa2c055f+216879]
+	GetHandleVerifier [0x0x7ff7fa2a7084+113236]
+	GetHandleVerifier [0x0x7ff7fa2a7239+113673]
+	GetHandleVerifier [0x0x7ff7fa28e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044801: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fa29e415+77285]
+	GetHandleVerifier [0x0x7ff7fa29e470+77376]
+	(No symbol) [0x0x7ff7fa069a6a]
+	(No symbol) [0x0x7ff7fa0c0406]
+	(No symbol) [0x0x7ff7fa0c06bc]
+	(No symbol) [0x0x7ff7fa113ac7]
+	(No symbol) [0x0x7ff7fa0e864f]
+	(No symbol) [0x0x7ff7fa11087f]
+	(No symbol) [0x0x7ff7fa0e83e3]
+	(No symbol) [0x0x7ff7fa0b1521]
+	(No symbol) [0x0x7ff7fa0b22b3]
+	GetHandleVerifier [0x0x7ff7fa581efd+3107021]
+	GetHandleVerifier [0x0x7ff7fa57c29d+3083373]
+	GetHandleVerifier [0x0x7ff7fa59bedd+3213485]
+	GetHandleVerifier [0x0x7ff7fa2b884e+184862]
+	GetHandleVerifier [0x0x7ff7fa2c055f+216879]
+	GetHandleVerifier [0x0x7ff7fa2a7084+113236]
+	GetHandleVerifier [0x0x7ff7fa2a7239+113673]
+	GetHandleVerifier [0x0x7ff7fa28e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80055900: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fa29e415+77285]
+	GetHandleVerifier [0x0x7ff7fa29e470+77376]
+	(No symbol) [0x0x7ff7fa069a6a]
+	(No symbol) [0x0x7ff7fa0c0406]
+	(No symbol) [0x0x7ff7fa0c06bc]
+	(No symbol) [0x0x7ff7fa113ac7]
+	(No symbol) [0x0x7ff7fa0e864f]
+	(No symbol) [0x0x7ff7fa11087f]
+	(No symbol) [0x0x7ff7fa0e83e3]
+	(No symbol) [0x0x7ff7fa0b1521]
+	(No symbol) [0x0x7ff7fa0b22b3]
+	GetHandleVerifier [0x0x7ff7fa581efd+3107021]
+	GetHandleVerifier [0x0x7ff7fa57c29d+3083373]
+	GetHandleVerifier [0x0x7ff7fa59bedd+3213485]
+	GetHandleVerifier [0x0x7ff7fa2b884e+184862]
+	GetHandleVerifier [0x0x7ff7fa2c055f+216879]
+	GetHandleVerifier [0x0x7ff7fa2a7084+113236]
+	GetHandleVerifier [0x0x7ff7fa2a7239+113673]
+	GetHandleVerifier [0x0x7ff7fa28e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80539301: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fa29e415+77285]
+	GetHandleVerifier [0x0x7ff7fa29e470+77376]
+	(No symbol) [0x0x7ff7fa069a6a]
+	(No symbol) [0x0x7ff7fa0c0406]
+	(No symbol) [0x0x7ff7fa0c06bc]
+	(No symbol) [0x0x7ff7fa113ac7]
+	(No symbol) [0x0x7ff7fa0e864f]
+	(No symbol) [0x0x7ff7fa11087f]
+	(No symbol) [0x0x7ff7fa0e83e3]
+	(No symbol) [0x0x7ff7fa0b1521]
+	(No symbol) [0x0x7ff7fa0b22b3]
+	GetHandleVerifier [0x0x7ff7fa581efd+3107021]
+	GetHandleVerifier [0x0x7ff7fa57c29d+3083373]
+	GetHandleVerifier [0x0x7ff7fa59bedd+3213485]
+	GetHandleVerifier [0x0x7ff7fa2b884e+184862]
+	GetHandleVerifier [0x0x7ff7fa2c055f+216879]
+	GetHandleVerifier [0x0x7ff7fa2a7084+113236]
+	GetHandleVerifier [0x0x7ff7fa2a7239+113673]
+	GetHandleVerifier [0x0x7ff7fa28e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80539308: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fa29e415+77285]
+	GetHandleVerifier [0x0x7ff7fa29e470+77376]
+	(No symbol) [0x0x7ff7fa069a6a]
+	(No symbol) [0x0x7ff7fa0c0406]
+	(No symbol) [0x0x7ff7fa0c06bc]
+	(No symbol) [0x0x7ff7fa113ac7]
+	(No symbol) [0x0x7ff7fa0e864f]
+	(No symbol) [0x0x7ff7fa11087f]
+	(No symbol) [0x0x7ff7fa0e83e3]
+	(No symbol) [0x0x7ff7fa0b1521]
+	(No symbol) [0x0x7ff7fa0b22b3]
+	GetHandleVerifier [0x0x7ff7fa581efd+3107021]
+	GetHandleVerifier [0x0x7ff7fa57c29d+3083373]
+	GetHandleVerifier [0x0x7ff7fa59bedd+3213485]
+	GetHandleVerifier [0x0x7ff7fa2b884e+184862]
+	GetHandleVerifier [0x0x7ff7fa2c055f+216879]
+	GetHandleVerifier [0x0x7ff7fa2a7084+113236]
+	GetHandleVerifier [0x0x7ff7fa2a7239+113673]
+	GetHandleVerifier [0x0x7ff7fa28e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.16
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (30-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 81728700 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 81901200 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80029200 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044400 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044800 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044801 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80055900 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80539301 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80539308 (30-Jul-2025 - 30-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81728700, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80029200_250730_250730_8493491_8493491.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80029200_250730_250730_8493491_8493491.csv (49051 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80055900_250730_250730_8493498_8493498.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80055900_250730_250730_8493498_8493498.csv (9818 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80539308_250730_250730_8493500_8493500.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80539308_250730_250730_8493500_8493500.csv (4635 bytes)
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.12
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (30-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 81728700 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 81901200 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044400 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044800 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044801 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80539301 (30-Jul-2025 - 30-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81728700, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.11
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (30-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 81728700 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 81901200 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044400 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044800 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80044801 (30-Jul-2025 - 30-Jul-2025)
+Request berhasil untuk 80539301 (30-Jul-2025 - 30-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81728700, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Browser ditutup.
+Proses upload dan unduh APEX gagal.
+=== Mulai Proses Praprocess Laporan Danamon dari hasil APEX ===
+Proses hapus data Open AWB di file master...
+Hasil berhasil disimpan ke: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan Updated Open AWB dari APEX ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan New Danamon 00 ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan New Danamon 01 ke file master...
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Mulai proses ekstraksi data RT AWB Danamon dari hasil APEX...
+Hasil disimpan ke: D:/RYAN/1. References/Danamon/RT REPORT.csv
+Proses hapus data RT AWB dari hasil APEX...
+File berhasil disimpan setelah menghapus baris: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 310725_6438936.csv
+Proses RT AWB Danamon selesai.
+Semua proses praprocess Danamon selesai.
+Membuka Thunderbird dan menyegarkan inbox...
+Thunderbird dibuka...
+Memulai proses refresh...
+Batas waktu 5 menit tercapai, proses menunggu refresh dihentikan..
+Mencari email dengan subjek 'OS CARD JNE'...
+Sudah baca 10 email dari belakang...
+Subject email: RE: OS CARD JNE 29/07/2025
+Attachment disimpan: d:/RYAN/1. References/Danamon\OS JNE.zip
+Diekstrak (ZIP): OS CC JNE.xlsx
+Diekstrak (ZIP): OS DBANK JNE.xlsx
+File arsip dihapus: d:/RYAN/1. References/Danamon\OS JNE.zip
+Total attachment disimpan: 1
+Email OS ditemukan dan attachment disimpan.
+Mencari email dengan subjek 'DATA PICKUP JNE'...
+Sudah baca 10 email dari belakang...
+Semua file di folder 'd:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt' berhasil dihapus.
+Subject email: RE: DATA PICKUP JNE 29/07/25
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_29072025_152550.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_29072025_152550.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_29072025_152550.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_29072025_165450.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_29072025_165450.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_29072025_165450.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_29072025_165448.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_29072025_165448.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_29072025_165448.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 2907.7z
+Diekstrak (7Z): ['KU AMEX JNE.txt', 'KU VIMAS JNE.txt']
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 2907.7z
+Total attachment disimpan: 4
+Email Pickup ditemukan dan attachment disimpan.
+Memproses data pickup dari folder 'Mentah Txt'...
+Data pickup ditambahkan ke: d:\RYAN\1. References\Danamon\Ref Pickup\Data Pickup\Pickup Danamon July 2025.csv
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Excel sedang sibuk... tunggu sebentar.
+Refresh selesai dan file disimpan.
+
+Membuka file: OS CC JNE 290725.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: Report Pickup Danamon Juli 2025.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+Fixed-width file disimpan di: d:\RYAN\3. Reports\Danamon\Report Sukses\REPORT SUKSES KK 31072025.txt
+Menunggu WhatsApp Web terbuka...
+
+Mengirim ke: Zaini → Raw Report.csv
+Menunggu status terkirim...
+Terkirim & status terdeteksi: Raw Report.csv
+Mengirim ke: Zaini → Report Pickup Danamon Juli 2025.xlsx
+Menunggu status terkirim...
+Terkirim & status terdeteksi: Report Pickup Danamon Juli 2025.xlsx
+Mengirim ke: Zaini → OS CC JNE 290725.xlsx
+Menunggu status terkirim...
+Terkirim & status terdeteksi: OS CC JNE 290725.xlsx
+Mengirim ke: Zaini → REPORT SUKSES KK 31072025.txt
+Menunggu status terkirim...
+Terkirim & status terdeteksi: REPORT SUKSES KK 31072025.txt
+Semua pengiriman selesai.
+=== Mulai Praprocess Laporan Generali, Kalog, LSIN & Smartfren ===
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 310725_6438936.csv
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 310725_6438936.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 310725_6438936.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 310725_6438936.csv
+Perbarui isi tabel: Table1
+Tabel di 'Sheet1' berhasil diperbarui dengan data dari: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 310725_6438936.csv
+Membuka Excel...
+
+Membuka file: 2. Query Update Status Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 2. Query Update Status.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report KALOG.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report LSIN.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Smartfren.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+
+=== TASK TABLE TRACKER ===
+Task                 Preprocess Request    Download   Praprocess
+Open Danamon         True       True       True       True      
+Open Generali        True       True       True       True      
+Open Kalog           True       True       True       True      
+Open LSIN            True       True       True       True      
+Open Smartfren       True       True       True       True      
+RT Danamon           True       True       True       True      
+New Danamon 81635700 False      True       True       False     
+New Danamon 81635701 False      True       False      False     
+New Kalog            False      True       False      True      
+New LSIN             False      True       False      True      
+New Smartfren 10528201 False      True       True       True      
+New Smartfren 80029200 False      True       True       True      
+New Smartfren 80044400 False      True       False      True      
+New Smartfren 80044800 False      True       False      True      
+New Smartfren 80044801 False      True       False      True      
+New Smartfren 80055900 False      True       True       True      
+New Smartfren 80539301 False      True       False      True      
+New Smartfren 80539308 False      True       True       True      
+Tracker summary disimpan ke: data/tracker\tracker_summary.csv
+Semua proses selesai.
+
+
+=== Log started at 2025-07-31 16:15:05 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: c:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Generali.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Kalog.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB LSIN.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Smartfren.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan RT AWB Danamon.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 310725.csv ke c:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 1 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Danamon 310725.csv
+Mengunggah dan mengunduh data dari Apex...
+Mencoba koneksi ke APEX host: 10.18.2.35
+Login ke sistem...
+Mengunggah file: Update Danamon 310725.csv
+File dikirim. Tunggu respon server...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: Update Danamon 310725_6439608.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Danamon 310725_6439608.csv (323319 bytes)
+Login ke sistem...
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.16
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.12
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.11
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Browser ditutup.
+Proses upload dan unduh APEX gagal.
+Proses hapus data Open AWB di file master...
+Hasil berhasil disimpan ke: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan Updated Open AWB dari APEX ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Semua proses praprocess Danamon selesai.
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Excel sedang sibuk... tunggu sebentar.
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+Fixed-width file disimpan di: d:\RYAN\3. Reports\Danamon\Report Sukses\REPORT SUKSES KK 31072025.txt
+Menunggu WhatsApp Web terbuka...
+
+Mengirim ke: Zaini → REPORT SUKSES KK 31072025.txt
+Menunggu status terkirim...
+Terkirim & status terdeteksi: REPORT SUKSES KK 31072025.txt
+Semua pengiriman selesai.
+
+
+=== Log started at 2025-08-01 07:00:02 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: C:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Danamon 310725.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Mengekstrak Open AWB untuk Open Generali...
+Excel dibaca: Generali Juli 2025.xlsx
+Excel dibaca: Generali Juni 2025.xlsx
+Excel dibaca: Generali Mei 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Generali.csv
+Mengekstrak Open AWB untuk Open Kalog...
+Excel dibaca: Report KALOG 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Kalog.csv
+Mengekstrak Open AWB untuk Open LSIN...
+Excel dibaca: Report LSIN 2025 (23 MAY 25).xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB LSIN.csv
+Mengekstrak Open AWB untuk Open Smartfren...
+REPORT SMARTFREN _ 80539308.xlsx - Sheet: 80539308 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet3 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80055900.xlsx - Sheet: 80055900 dibaca.
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Smartfren.csv
+Mengekstrak RT AWB dari berbagai sumber...
+Memproses RT AWB RT Danamon...
+File RT Danamon berhasil dibaca!
+RT AWB RT Danamon disimpan ke: c:/Users/DELL/Desktop/ReportApp/data/RT AWB Danamon.csv
+Proses RT Danamon selesai.
+
+Mengekstrak New AWB dari berbagai sumber...
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 6 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+Open AWB Generali.csv berhasil dimuat.
+Open AWB Kalog.csv berhasil dimuat.
+Open AWB LSIN.csv berhasil dimuat.
+Open AWB Smartfren.csv berhasil dimuat.
+RT AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 010825.csv
+Mengunggah dan mengunduh data dari Apex...
+Mencoba koneksi ke APEX host: 10.18.2.35
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\ReportApp\main.py", line 122, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\DELL\Desktop\ReportApp\main.py", line 43, in main
+    success = process_apex_upload_and_request(
+        file_name=file,
+    ...<7 lines>...
+        rt_awb_tasks=rt_awb_tasks
+    )
+  File "C:\Users\DELL\Desktop\ReportApp\workflows\extractors\apex_data_extractor.py", line 290, in process_apex_upload_and_request
+    driver = start_driver(download_dir)
+  File "C:\Users\DELL\Desktop\ReportApp\workflows\extractors\apex_data_extractor.py", line 30, in start_driver
+    return webdriver.Chrome(options=options)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 47, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 69, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 356, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 447, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+	GetHandleVerifier [0x0x7ff685ebe415+77285]
+	GetHandleVerifier [0x0x7ff685ebe470+77376]
+	(No symbol) [0x0x7ff685c89a6a]
+	(No symbol) [0x0x7ff685cc84e3]
+	(No symbol) [0x0x7ff685cc278e]
+	(No symbol) [0x0x7ff685d1602e]
+	(No symbol) [0x0x7ff685d157c0]
+	(No symbol) [0x0x7ff685d083e3]
+	(No symbol) [0x0x7ff685cd1521]
+	(No symbol) [0x0x7ff685cd22b3]
+	GetHandleVerifier [0x0x7ff6861a1efd+3107021]
+	GetHandleVerifier [0x0x7ff68619c29d+3083373]
+	GetHandleVerifier [0x0x7ff6861bbedd+3213485]
+	GetHandleVerifier [0x0x7ff685ed884e+184862]
+	GetHandleVerifier [0x0x7ff685ee055f+216879]
+	GetHandleVerifier [0x0x7ff685ec7084+113236]
+	GetHandleVerifier [0x0x7ff685ec7239+113673]
+	GetHandleVerifier [0x0x7ff685eae298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+
+
+=== Log started at 2025-08-01 08:03:49 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: C:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Generali.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Kalog.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB LSIN.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Smartfren.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan RT AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 010825.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Mengekstrak Open AWB untuk Open Generali...
+Excel dibaca: Generali Juli 2025.xlsx
+Excel dibaca: Generali Juni 2025.xlsx
+Excel dibaca: Generali Mei 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Generali.csv
+Mengekstrak Open AWB untuk Open Kalog...
+Excel dibaca: Report KALOG 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Kalog.csv
+Mengekstrak Open AWB untuk Open LSIN...
+Excel dibaca: Report LSIN 2025 (23 MAY 25).xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB LSIN.csv
+Mengekstrak Open AWB untuk Open Smartfren...
+REPORT SMARTFREN _ 80539308.xlsx - Sheet: 80539308 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet3 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80055900.xlsx - Sheet: 80055900 dibaca.
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Smartfren.csv
+Mengekstrak RT AWB dari berbagai sumber...
+Memproses RT AWB RT Danamon...
+File RT Danamon berhasil dibaca!
+RT AWB RT Danamon disimpan ke: c:/Users/DELL/Desktop/ReportApp/data/RT AWB Danamon.csv
+Proses RT Danamon selesai.
+
+Mengekstrak New AWB dari berbagai sumber...
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 6 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+Open AWB Generali.csv berhasil dimuat.
+Open AWB Kalog.csv berhasil dimuat.
+Open AWB LSIN.csv berhasil dimuat.
+Open AWB Smartfren.csv berhasil dimuat.
+RT AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 010825.csv
+Mengunggah dan mengunduh data dari Apex...
+Mencoba koneksi ke APEX host: 10.18.2.35
+Login ke sistem...
+Mengunggah file: Update Ryan 010825.csv
+File dikirim. Tunggu respon server...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: Update Ryan 010825_6440031.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 010825_6440031.csv (964647 bytes)
+Login ke sistem...
+Request berhasil untuk 81635700 (31-Jul-2025 - 01-Aug-2025)
+Request berhasil untuk 81635701 (31-Jul-2025 - 01-Aug-2025)
+Request berhasil untuk 81728700 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 81901200 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 10528201 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80029200 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044400 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044800 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044801 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80055900 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80539301 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80539308 (31-Jul-2025 - 31-Jul-2025)
+Error di host 10.18.2.35: Message: stale element reference: stale element not found
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff685ebe415+77285]
+	GetHandleVerifier [0x0x7ff685ebe470+77376]
+	(No symbol) [0x0x7ff685c89a6a]
+	(No symbol) [0x0x7ff685c9fec4]
+	(No symbol) [0x0x7ff685c9e9a3]
+	(No symbol) [0x0x7ff685c92181]
+	(No symbol) [0x0x7ff685c9002f]
+	(No symbol) [0x0x7ff685c944cc]
+	(No symbol) [0x0x7ff685c9459f]
+	(No symbol) [0x0x7ff685ce25ed]
+	(No symbol) [0x0x7ff685cd33c3]
+	(No symbol) [0x0x7ff685d0860a]
+	(No symbol) [0x0x7ff685cd2d06]
+	(No symbol) [0x0x7ff685d08820]
+	(No symbol) [0x0x7ff685d3087f]
+	(No symbol) [0x0x7ff685d083e3]
+	(No symbol) [0x0x7ff685cd1521]
+	(No symbol) [0x0x7ff685cd22b3]
+	GetHandleVerifier [0x0x7ff6861a1efd+3107021]
+	GetHandleVerifier [0x0x7ff68619c29d+3083373]
+	GetHandleVerifier [0x0x7ff6861bbedd+3213485]
+	GetHandleVerifier [0x0x7ff685ed884e+184862]
+	GetHandleVerifier [0x0x7ff685ee055f+216879]
+	GetHandleVerifier [0x0x7ff685ec7084+113236]
+	GetHandleVerifier [0x0x7ff685ec7239+113673]
+	GetHandleVerifier [0x0x7ff685eae298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.16
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635700 (31-Jul-2025 - 01-Aug-2025)
+Request berhasil untuk 81635701 (31-Jul-2025 - 01-Aug-2025)
+Request berhasil untuk 81728700 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 81901200 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 10528201 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80029200 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044400 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044800 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044801 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80055900 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80539301 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80539308 (31-Jul-2025 - 31-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81635700_250731_250801_8497773_8497773.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81635700_250731_250801_8497773_8497773.csv (33310 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81728700_250731_250731_8497780_8497780.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81728700_250731_250731_8497780_8497780.csv (5752 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_CGK000_10528201_250731_250731_8497787_8497787.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_CGK000_10528201_250731_250731_8497787_8497787.csv (6565 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80029200_250731_250731_8497791_8497791.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80029200_250731_250731_8497791_8497791.csv (41054 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044800: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff685ebe415+77285]
+	GetHandleVerifier [0x0x7ff685ebe470+77376]
+	(No symbol) [0x0x7ff685c89a6a]
+	(No symbol) [0x0x7ff685c91419]
+	(No symbol) [0x0x7ff685c944cc]
+	(No symbol) [0x0x7ff685c9459f]
+	(No symbol) [0x0x7ff685ce132a]
+	(No symbol) [0x0x7ff685cd62cd]
+	(No symbol) [0x0x7ff685d0860a]
+	(No symbol) [0x0x7ff685cd2d06]
+	(No symbol) [0x0x7ff685d08820]
+	(No symbol) [0x0x7ff685d3087f]
+	(No symbol) [0x0x7ff685d083e3]
+	(No symbol) [0x0x7ff685cd1521]
+	(No symbol) [0x0x7ff685cd22b3]
+	GetHandleVerifier [0x0x7ff6861a1efd+3107021]
+	GetHandleVerifier [0x0x7ff68619c29d+3083373]
+	GetHandleVerifier [0x0x7ff6861bbedd+3213485]
+	GetHandleVerifier [0x0x7ff685ed884e+184862]
+	GetHandleVerifier [0x0x7ff685ee055f+216879]
+	GetHandleVerifier [0x0x7ff685ec7084+113236]
+	GetHandleVerifier [0x0x7ff685ec7239+113673]
+	GetHandleVerifier [0x0x7ff685eae298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80055900_250731_250731_8497805_8497805.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80055900_250731_250731_8497805_8497805.csv (5050 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+API error (500 dst) attempt 1/3 → 80539308
+Request berhasil untuk 80539308 (31-Jul-2025 - 31-Jul-2025)
+↻ Request ulang berhasil, akan coba download lagi...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80539308: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff685ebe415+77285]
+	GetHandleVerifier [0x0x7ff685ebe470+77376]
+	(No symbol) [0x0x7ff685c89a6a]
+	(No symbol) [0x0x7ff685ce0406]
+	(No symbol) [0x0x7ff685ce06bc]
+	(No symbol) [0x0x7ff685d33ac7]
+	(No symbol) [0x0x7ff685d0864f]
+	(No symbol) [0x0x7ff685d3087f]
+	(No symbol) [0x0x7ff685d083e3]
+	(No symbol) [0x0x7ff685cd1521]
+	(No symbol) [0x0x7ff685cd22b3]
+	GetHandleVerifier [0x0x7ff6861a1efd+3107021]
+	GetHandleVerifier [0x0x7ff68619c29d+3083373]
+	GetHandleVerifier [0x0x7ff6861bbedd+3213485]
+	GetHandleVerifier [0x0x7ff685ed884e+184862]
+	GetHandleVerifier [0x0x7ff685ee055f+216879]
+	GetHandleVerifier [0x0x7ff685ec7084+113236]
+	GetHandleVerifier [0x0x7ff685ec7239+113673]
+	GetHandleVerifier [0x0x7ff685eae298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.12
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (31-Jul-2025 - 01-Aug-2025)
+Request berhasil untuk 81901200 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044400 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044800 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044801 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80539301 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80539308 (31-Jul-2025 - 31-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80539308_250731_250731_8706223_8706223.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80539308_250731_250731_8706223_8706223.csv (5874 bytes)
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.11
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (31-Jul-2025 - 01-Aug-2025)
+Request berhasil untuk 81901200 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044400 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044800 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80044801 (31-Jul-2025 - 31-Jul-2025)
+Request berhasil untuk 80539301 (31-Jul-2025 - 31-Jul-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Browser ditutup.
+Proses upload dan unduh APEX gagal.
+=== Mulai Proses Praprocess Laporan Danamon dari hasil APEX ===
+Proses hapus data Open AWB di file master...
+Hasil berhasil disimpan ke: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan Updated Open AWB dari APEX ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan New Danamon 00 ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan New Danamon 01 ke file master...
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Mulai proses ekstraksi data RT AWB Danamon dari hasil APEX...
+Hasil disimpan ke: D:/RYAN/1. References/Danamon/RT REPORT.csv
+Proses hapus data RT AWB dari hasil APEX...
+File berhasil disimpan setelah menghapus baris: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 010825_6440031.csv
+Proses RT AWB Danamon selesai.
+Semua proses praprocess Danamon selesai.
+Membuka Thunderbird dan menyegarkan inbox...
+Thunderbird dibuka...
+Memulai proses refresh...
+Batas waktu 5 menit tercapai, proses menunggu refresh dihentikan..
+Mencari email dengan subjek 'OS CARD JNE'...
+Sudah baca 10 email dari belakang...
+Subject email: RE: OS CARD JNE 31/07/2025
+Attachment disimpan: d:/RYAN/1. References/Danamon\OS JNE.zip
+Diekstrak (ZIP): OS CC JNE.xlsx
+Diekstrak (ZIP): OS DBANK JNE.xlsx
+File arsip dihapus: d:/RYAN/1. References/Danamon\OS JNE.zip
+Total attachment disimpan: 1
+Email OS ditemukan dan attachment disimpan.
+Mencari email dengan subjek 'DATA PICKUP JNE'...
+Sudah baca 10 email dari belakang...
+Semua file di folder 'd:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt' berhasil dihapus.
+Subject email: RE: DATA PICKUP JNE 31/07/25
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_31072025_180856.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_31072025_180856.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_31072025_180856.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_31072025_180855.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_31072025_180855.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_31072025_180855.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 3107.7z
+Diekstrak (7Z): ['KU AMEX JNE.txt', 'KU VIMAS JNE.txt']
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 3107.7z
+Total attachment disimpan: 3
+Email Pickup ditemukan dan attachment disimpan.
+Memproses data pickup dari folder 'Mentah Txt'...
+Data pickup ditambahkan ke: d:\RYAN\1. References\Danamon\Ref Pickup\Data Pickup\Pickup Danamon July 2025.csv
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Excel sedang sibuk... tunggu sebentar.
+Refresh selesai dan file disimpan.
+
+Membuka file: OS CC JNE 310725.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: Report Pickup Danamon Juli 2025.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+Fixed-width file disimpan di: d:\RYAN\3. Reports\Danamon\Report Sukses\REPORT SUKSES KK 01082025.txt
+Menunggu WhatsApp Web terbuka...
+
+Mengirim ke: Zaini → Raw Report.csv
+Menunggu status terkirim...
+Terkirim & status terdeteksi: Raw Report.csv
+Mengirim ke: Zaini → Report Pickup Danamon Juli 2025.xlsx
+Menunggu status terkirim...
+Terkirim & status terdeteksi: Report Pickup Danamon Juli 2025.xlsx
+Mengirim ke: Zaini → OS CC JNE 310725.xlsx
+Menunggu status terkirim...
+Terkirim & status terdeteksi: OS CC JNE 310725.xlsx
+Mengirim ke: Zaini → REPORT SUKSES KK 01082025.txt
+Menunggu status terkirim...
+Terkirim & status terdeteksi: REPORT SUKSES KK 01082025.txt
+Semua pengiriman selesai.
+=== Mulai Praprocess Laporan Generali, Kalog, LSIN & Smartfren ===
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 010825_6440031.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 010825_6440031.csv
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 010825_6440031.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 010825_6440031.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 010825_6440031.csv
+Perbarui isi tabel: Table1
+Tabel di 'Sheet1' berhasil diperbarui dengan data dari: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 010825_6440031.csv
+Membuka Excel...
+
+Membuka file: 2. Query Update Status Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 2. Query Update Status.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report KALOG.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report LSIN.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Smartfren.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+
+=== TASK TABLE TRACKER ===
+Task                 Preprocess Request    Download   Praprocess
+Open Danamon         True       True       True       True      
+Open Generali        True       True       True       True      
+Open Kalog           True       True       True       True      
+Open LSIN            True       True       True       True      
+Open Smartfren       True       True       True       True      
+RT Danamon           True       True       True       True      
+New Danamon 81635700 False      True       True       False     
+New Danamon 81635701 False      True       False      False     
+New Kalog            False      True       True       True      
+New LSIN             False      True       False      True      
+New Smartfren 10528201 False      True       True       True      
+New Smartfren 80029200 False      True       True       True      
+New Smartfren 80044400 False      True       False      True      
+New Smartfren 80044800 False      True       False      True      
+New Smartfren 80044801 False      True       False      True      
+New Smartfren 80055900 False      True       True       True      
+New Smartfren 80539301 False      True       False      True      
+New Smartfren 80539308 False      True       True       True      
+Tracker summary disimpan ke: data/tracker\tracker_summary.csv
+Semua proses selesai.
+
+
+=== Log started at 2025-08-04 07:00:03 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: C:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Generali.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Kalog.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB LSIN.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Smartfren.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan RT AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 010825.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Mengekstrak Open AWB untuk Open Generali...
+Excel dibaca: Generali Juli 2025.xlsx
+Excel dibaca: Generali Juni 2025.xlsx
+Excel dibaca: Generali Mei 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Generali.csv
+Mengekstrak Open AWB untuk Open Kalog...
+Excel dibaca: Report KALOG 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Kalog.csv
+Mengekstrak Open AWB untuk Open LSIN...
+Excel dibaca: Report LSIN 2025 (23 MAY 25).xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB LSIN.csv
+Mengekstrak Open AWB untuk Open Smartfren...
+REPORT SMARTFREN _ 80539308.xlsx - Sheet: 80539308 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet3 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80055900.xlsx - Sheet: 80055900 dibaca.
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Smartfren.csv
+Mengekstrak RT AWB dari berbagai sumber...
+Memproses RT AWB RT Danamon...
+File RT Danamon berhasil dibaca!
+RT AWB RT Danamon disimpan ke: c:/Users/DELL/Desktop/ReportApp/data/RT AWB Danamon.csv
+Proses RT Danamon selesai.
+
+Mengekstrak New AWB dari berbagai sumber...
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 6 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+Open AWB Generali.csv berhasil dimuat.
+Open AWB Kalog.csv berhasil dimuat.
+Open AWB LSIN.csv berhasil dimuat.
+Open AWB Smartfren.csv berhasil dimuat.
+RT AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 040825.csv
+Mengunggah dan mengunduh data dari Apex...
+Mencoba koneksi ke APEX host: 10.18.2.35
+Login ke sistem...
+Mengunggah file: Update Ryan 040825.csv
+File dikirim. Tunggu respon server...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: Update Ryan 040825_6442043.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 040825_6442043.csv (975742 bytes)
+Login ke sistem...
+Request berhasil untuk 81635700 (01-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 81635701 (01-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 81728700 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 81901200 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 10528201 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80029200 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044400 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044800 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044801 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80055900 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80539301 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80539308 (01-Aug-2025 - 03-Aug-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81635700_250801_250804_6442044_6442044.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81635700_250801_250804_6442044_6442044.csv (638445 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81728700_250801_250803_6442046_6442046.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81728700_250801_250803_6442046_6442046.csv (7347 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_CGK000_10528201_250801_250803_6442048_6442048.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_CGK000_10528201_250801_250803_6442048_6442048.csv (78060 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80029200_250801_250803_6442049_6442049.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80029200_250801_250803_6442049_6442049.csv (12911 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80055900_250801_250803_6442053_6442053.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80055900_250801_250803_6442053_6442053.csv (5955 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80539308_250801_250803_6442055_6442055.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80539308_250801_250803_6442055_6442055.csv (8218 bytes)
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.16
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (01-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 81901200 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044400 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044800 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044801 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80539301 (01-Aug-2025 - 03-Aug-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.12
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (01-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 81901200 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044400 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044800 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044801 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80539301 (01-Aug-2025 - 03-Aug-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.11
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (01-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 81901200 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044400 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044800 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80044801 (01-Aug-2025 - 03-Aug-2025)
+Request berhasil untuk 80539301 (01-Aug-2025 - 03-Aug-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Browser ditutup.
+Proses upload dan unduh APEX gagal.
+=== Mulai Proses Praprocess Laporan Danamon dari hasil APEX ===
+Proses hapus data Open AWB di file master...
+Hasil berhasil disimpan ke: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan Updated Open AWB dari APEX ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan New Danamon 00 ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan New Danamon 01 ke file master...
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Mulai proses ekstraksi data RT AWB Danamon dari hasil APEX...
+Hasil disimpan ke: D:/RYAN/1. References/Danamon/RT REPORT.csv
+Proses hapus data RT AWB dari hasil APEX...
+File berhasil disimpan setelah menghapus baris: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 040825_6442043.csv
+Proses RT AWB Danamon selesai.
+Semua proses praprocess Danamon selesai.
+Membuka Thunderbird dan menyegarkan inbox...
+Thunderbird dibuka...
+Memulai proses refresh...
+Batas waktu 5 menit tercapai, proses menunggu refresh dihentikan..
+Mencari email dengan subjek 'OS CARD JNE'...
+Sudah baca 10 email dari belakang...
+Subject email: OS CARD JNE 01/08/2025
+Attachment disimpan: d:/RYAN/1. References/Danamon\OS JNE.zip
+Diekstrak (ZIP): OS CC JNE.xlsx
+Diekstrak (ZIP): OS DBANK JNE.xlsx
+File arsip dihapus: d:/RYAN/1. References/Danamon\OS JNE.zip
+Total attachment disimpan: 1
+Email OS ditemukan dan attachment disimpan.
+Mencari email dengan subjek 'DATA PICKUP JNE'...
+Sudah baca 10 email dari belakang...
+Semua file di folder 'd:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt' berhasil dihapus.
+Subject email: RE: DATA PICKUP JNE 01/08/25
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_01082025_191157.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_01082025_191157.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_01082025_191157.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_01082025_191155.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_01082025_191155.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_01082025_191155.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 0108.7z
+Diekstrak (7Z): ['KU AMEX JNE.txt', 'KU VIMAS JNE.txt']
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 0108.7z
+Total attachment disimpan: 3
+Email Pickup ditemukan dan attachment disimpan.
+Memproses data pickup dari folder 'Mentah Txt'...
+Data pickup ditambahkan ke: d:\RYAN\1. References\Danamon\Ref Pickup\Data Pickup\Pickup Danamon August 2025.csv
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: OS CC JNE 010825.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: Report Pickup Danamon Agustus 2025.xlsx
+Terjadi kesalahan: (-2147352567, 'Exception occurred.', (0, 'Microsoft Excel', "Sorry, we couldn't find d:\\RYAN\\3. Reports\\Danamon\\Report Pickup Danamon Agustus 2025.xlsx. Is it possible it was moved, renamed or deleted?", 'xlmain11.chm', 0, -2146827284), None)
+
+Semua file telah diproses.
+Fixed-width file disimpan di: d:\RYAN\3. Reports\Danamon\Report Sukses\REPORT SUKSES KK 04082025.txt
+Menunggu WhatsApp Web terbuka...
+
+Mengirim ke: Zaini → Raw Report.csv
+Menunggu status terkirim...
+Terkirim & status terdeteksi: Raw Report.csv
+Mengirim ke: Zaini → OS CC JNE 010825.xlsx
+Menunggu status terkirim...
+Terkirim & status terdeteksi: OS CC JNE 010825.xlsx
+Mengirim ke: Zaini → REPORT SUKSES KK 04082025.txt
+Menunggu status terkirim...
+Terkirim & status terdeteksi: REPORT SUKSES KK 04082025.txt
+Semua pengiriman selesai.
+=== Mulai Praprocess Laporan Generali, Kalog, LSIN & Smartfren ===
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 040825_6442043.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 040825_6442043.csv
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 040825_6442043.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 040825_6442043.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 040825_6442043.csv
+Perbarui isi tabel: Table1
+Tabel di 'Sheet1' berhasil diperbarui dengan data dari: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 040825_6442043.csv
+Membuka Excel...
+
+Membuka file: 2. Query Update Status Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 2. Query Update Status.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report KALOG.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report LSIN.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Smartfren.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+
+=== TASK TABLE TRACKER ===
+Task                 Preprocess Request    Download   Praprocess
+Open Danamon         True       True       True       True      
+Open Generali        True       True       True       True      
+Open Kalog           True       True       True       True      
+Open LSIN            True       True       True       True      
+Open Smartfren       True       True       True       True      
+RT Danamon           True       True       True       True      
+New Danamon 81635700 False      True       True       False     
+New Danamon 81635701 False      True       False      False     
+New Kalog            False      True       True       True      
+New LSIN             False      True       False      True      
+New Smartfren 10528201 False      True       True       True      
+New Smartfren 80029200 False      True       True       True      
+New Smartfren 80044400 False      True       False      True      
+New Smartfren 80044800 False      True       False      True      
+New Smartfren 80044801 False      True       False      True      
+New Smartfren 80055900 False      True       True       True      
+New Smartfren 80539301 False      True       False      True      
+New Smartfren 80539308 False      True       True       True      
+Tracker summary disimpan ke: data/tracker\tracker_summary.csv
+Semua proses selesai.
+
+
+=== Log started at 2025-08-05 07:00:03 ===
+Memulai ReportApp..
+Menjalankan proses backup file sebelumnya...
+Mencari file CSV di: C:\Users\DELL\Desktop\ReportApp\data
+Memindahkan Open AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Generali.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Kalog.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB LSIN.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Open AWB Smartfren.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan RT AWB Danamon.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Memindahkan Update Ryan 040825.csv ke C:\Users\DELL\Desktop\ReportApp\data\archive
+Backup selesai.
+Mengekstrak Open AWB dari berbagai sumber...
+Mengekstrak Open AWB untuk Open Danamon...
+CSV dibaca: Raw Report.csv
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Danamon.csv
+Mengekstrak Open AWB untuk Open Generali...
+Excel dibaca: Generali Juli 2025.xlsx
+Excel dibaca: Generali Juni 2025.xlsx
+Excel dibaca: Generali Mei 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Generali.csv
+Mengekstrak Open AWB untuk Open Kalog...
+Excel dibaca: Report KALOG 2025.xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Kalog.csv
+Mengekstrak Open AWB untuk Open LSIN...
+Excel dibaca: Report LSIN 2025 (23 MAY 25).xlsx
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB LSIN.csv
+Mengekstrak Open AWB untuk Open Smartfren...
+REPORT SMARTFREN _ 80539308.xlsx - Sheet: 80539308 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _10528201.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet3 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80029200, 80044800, 80044801 & 80539301.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet2 dibaca.
+REPORT SMARTFREN _80044400.xlsx - Sheet: Sheet1 dibaca.
+REPORT SMARTFREN _80055900.xlsx - Sheet: 80055900 dibaca.
+Open AWB disimpan di: c:/Users/DELL/Desktop/ReportApp/data/Open AWB Smartfren.csv
+Mengekstrak RT AWB dari berbagai sumber...
+Memproses RT AWB RT Danamon...
+File RT Danamon berhasil dibaca!
+RT AWB RT Danamon disimpan ke: c:/Users/DELL/Desktop/ReportApp/data/RT AWB Danamon.csv
+Proses RT Danamon selesai.
+
+Mengekstrak New AWB dari berbagai sumber...
+Menggabungkan semua file CSV Open AWB...
+Menggabungkan 6 file CSV dari: c:/Users/DELL/Desktop/ReportApp/data
+Open AWB Danamon.csv berhasil dimuat.
+Open AWB Generali.csv berhasil dimuat.
+Open AWB Kalog.csv berhasil dimuat.
+Open AWB LSIN.csv berhasil dimuat.
+Open AWB Smartfren.csv berhasil dimuat.
+RT AWB Danamon.csv berhasil dimuat.
+File hasil merge disimpan di:
+c:/Users/DELL/Desktop/ReportApp/data\Update Ryan 050825.csv
+Mengunggah dan mengunduh data dari Apex...
+Mencoba koneksi ke APEX host: 10.18.2.35
+Login ke sistem...
+Mengunggah file: Update Ryan 050825.csv
+File dikirim. Tunggu respon server...
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: Update Ryan 050825_6443565.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv (1350755 bytes)
+Login ke sistem...
+Request berhasil untuk 81635700 (04-Aug-2025 - 05-Aug-2025)
+Request berhasil untuk 81635701 (04-Aug-2025 - 05-Aug-2025)
+Request berhasil untuk 81728700 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 81901200 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 10528201 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80029200 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044400 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044800 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044801 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80055900 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80539301 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80539308 (04-Aug-2025 - 04-Aug-2025)
+[!] Gagal klik tombol History: Message: stale element reference: stale element not found
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff64444fec4]
+	(No symbol) [0x0x7ff64444e9a3]
+	(No symbol) [0x0x7ff644442181]
+	(No symbol) [0x0x7ff6444422e1]
+	(No symbol) [0x0x7ff64444002f]
+	(No symbol) [0x0x7ff644444811]
+	(No symbol) [0x0x7ff6444e1c0b]
+	(No symbol) [0x0x7ff6444b860a]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 81635700: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 81635701: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 81728700: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 81901200: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 10528201: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80029200: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044400: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044800: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044801: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80055900: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80539301: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80539308: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.16
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635700 (04-Aug-2025 - 05-Aug-2025)
+Request berhasil untuk 81635701 (04-Aug-2025 - 05-Aug-2025)
+Request berhasil untuk 81728700 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 81901200 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 10528201 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80029200 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044400 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044800 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044801 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80055900 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80539301 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80539308 (04-Aug-2025 - 04-Aug-2025)
+[!] Gagal klik tombol History: Message: stale element reference: stale element not found
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff64444fec4]
+	(No symbol) [0x0x7ff64444e9a3]
+	(No symbol) [0x0x7ff644442181]
+	(No symbol) [0x0x7ff6444422e1]
+	(No symbol) [0x0x7ff64444002f]
+	(No symbol) [0x0x7ff644444811]
+	(No symbol) [0x0x7ff6444e1c0b]
+	(No symbol) [0x0x7ff6444b860a]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 81635700: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 81635701: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 81728700: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 81901200: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 10528201: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80029200: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044400: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044800: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80044801: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80055900: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80539301: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Download gagal untuk 80539308: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="Status History SLA_search_field"]"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff64466e415+77285]
+	GetHandleVerifier [0x0x7ff64466e470+77376]
+	(No symbol) [0x0x7ff644439a6a]
+	(No symbol) [0x0x7ff644490406]
+	(No symbol) [0x0x7ff6444906bc]
+	(No symbol) [0x0x7ff6444e3ac7]
+	(No symbol) [0x0x7ff6444b864f]
+	(No symbol) [0x0x7ff6444e087f]
+	(No symbol) [0x0x7ff6444b83e3]
+	(No symbol) [0x0x7ff644481521]
+	(No symbol) [0x0x7ff6444822b3]
+	GetHandleVerifier [0x0x7ff644951efd+3107021]
+	GetHandleVerifier [0x0x7ff64494c29d+3083373]
+	GetHandleVerifier [0x0x7ff64496bedd+3213485]
+	GetHandleVerifier [0x0x7ff64468884e+184862]
+	GetHandleVerifier [0x0x7ff64469055f+216879]
+	GetHandleVerifier [0x0x7ff644677084+113236]
+	GetHandleVerifier [0x0x7ff644677239+113673]
+	GetHandleVerifier [0x0x7ff64465e298+11368]
+	BaseThreadInitThunk [0x0x7ffc877d7374+20]
+	RtlUserThreadStart [0x0x7ffc8791cc91+33]
+
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.12
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635700 (04-Aug-2025 - 05-Aug-2025)
+Request berhasil untuk 81635701 (04-Aug-2025 - 05-Aug-2025)
+Request berhasil untuk 81728700 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 81901200 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 10528201 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80029200 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044400 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044800 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044801 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80055900 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80539301 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80539308 (04-Aug-2025 - 04-Aug-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_81635700_250804_250805_8725157_8725157.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_81635700_250804_250805_8725157_8725157.csv (11989 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81728700, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 10528201, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80029200_250804_250804_8725170_8725170.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80029200_250804_250804_8725170_8725170.csv (10546 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80055900_250804_250804_8725179_8725179.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80055900_250804_250804_8725179_8725179.csv (4901 bytes)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tautan download diklik: SLA0_Y_NA_80539308_250804_250804_8725182_8725182.csv
+Menunggu file selesai diunduh...
+File berhasil diunduh: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\SLA0_Y_NA_80539308_250804_250804_8725182_8725182.csv (8098 bytes)
+Browser ditutup.
+Mencoba koneksi ke APEX host: 10.18.2.11
+Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.
+Login ke sistem...
+Request berhasil untuk 81635701 (04-Aug-2025 - 05-Aug-2025)
+Request berhasil untuk 81728700 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 81901200 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 10528201 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044400 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044800 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80044801 (04-Aug-2025 - 04-Aug-2025)
+Request berhasil untuk 80539301 (04-Aug-2025 - 04-Aug-2025)
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81635701, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81728700, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 81901200, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 10528201, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044400, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044800, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80044801, lanjut akun berikutnya.
+Menunggu link download siap (auto-refresh setiap 10 detik)...
+Tidak ada data untuk 80539301, lanjut akun berikutnya.
+Browser ditutup.
+Proses upload dan unduh APEX gagal.
+=== Mulai Proses Praprocess Laporan Danamon dari hasil APEX ===
+Proses hapus data Open AWB di file master...
+Hasil berhasil disimpan ke: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan Updated Open AWB dari APEX ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan New Danamon 00 ke file master...
+Data berhasil ditambahkan ke file master: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Gabungkan New Danamon 01 ke file master...
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Hapus duplikat berdasarkan AWB di file master...
+Duplikat berdasarkan kolom 'AWB' berhasil dihapus. Hasil disimpan di: D:/RYAN/3. Reports/Danamon/Raw Report.csv
+Mulai proses ekstraksi data RT AWB Danamon dari hasil APEX...
+Hasil disimpan ke: D:/RYAN/1. References/Danamon/RT REPORT.csv
+Proses hapus data RT AWB dari hasil APEX...
+File berhasil disimpan setelah menghapus baris: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv
+Proses RT AWB Danamon selesai.
+Semua proses praprocess Danamon selesai.
+Membuka Thunderbird dan menyegarkan inbox...
+Thunderbird dibuka...
+Memulai proses refresh...
+Batas waktu 5 menit tercapai, proses menunggu refresh dihentikan..
+Mencari email dengan subjek 'OS CARD JNE'...
+Sudah baca 10 email dari belakang...
+Subject email: OS CARD JNE 01/08/2025
+Attachment disimpan: d:/RYAN/1. References/Danamon\OS JNE.zip
+Diekstrak (ZIP): OS CC JNE.xlsx
+Diekstrak (ZIP): OS DBANK JNE.xlsx
+File arsip dihapus: d:/RYAN/1. References/Danamon\OS JNE.zip
+Total attachment disimpan: 1
+Email OS ditemukan dan attachment disimpan.
+Mencari email dengan subjek 'DATA PICKUP JNE'...
+Sudah baca 10 email dari belakang...
+Semua file di folder 'd:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt' berhasil dihapus.
+Subject email: RE: DATA PICKUP JNE 01/08/25
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_01082025_191157.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_01082025_191157.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_01082025_191157.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_01082025_191155.zip
+Diekstrak (ZIP): JNE_DeliveryType_CC_01082025_191155.txt
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\JNE_DeliveryType_CC_01082025_191155.zip
+Attachment disimpan: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 0108.7z
+Diekstrak (7Z): ['KU AMEX JNE.txt', 'KU VIMAS JNE.txt']
+File arsip dihapus: d:/RYAN/1. References/Danamon/Ref Pickup/Mentah Txt\KU JNE 0108.7z
+Total attachment disimpan: 3
+Email Pickup ditemukan dan attachment disimpan.
+Memproses data pickup dari folder 'Mentah Txt'...
+Data pickup ditambahkan ke: d:\RYAN\1. References\Danamon\Ref Pickup\Data Pickup\Pickup Danamon August 2025.csv
+Membuka Excel...
+
+Membuka file: Query Danamon.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: OS CC JNE 010825.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: Report Pickup Danamon Agustus 2025.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+Fixed-width file disimpan di: d:\RYAN\3. Reports\Danamon\Report Sukses\REPORT SUKSES KK 05082025.txt
+Menunggu WhatsApp Web terbuka...
+
+Mengirim ke: Zaini → Raw Report.csv
+Menunggu status terkirim...
+Terkirim & status terdeteksi: Raw Report.csv
+Mengirim ke: Zaini → Report Pickup Danamon Agustus 2025.xlsx
+Menunggu status terkirim...
+Terkirim & status terdeteksi: Report Pickup Danamon Agustus 2025.xlsx
+Mengirim ke: Zaini → OS CC JNE 010825.xlsx
+Menunggu status terkirim...
+Terkirim & status terdeteksi: OS CC JNE 010825.xlsx
+Mengirim ke: Zaini → REPORT SUKSES KK 05082025.txt
+Menunggu status terkirim...
+Terkirim & status terdeteksi: REPORT SUKSES KK 05082025.txt
+Semua pengiriman selesai.
+=== Mulai Praprocess Laporan Generali, Kalog, LSIN & Smartfren ===
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv
+Terjadi kesalahan: [Errno 2] No such file or directory: 'no_data'
+Data berhasil ditambahkan ke file master: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv
+Perbarui isi tabel: Table1
+Tabel di 'Sheet1' berhasil diperbarui dengan data dari: C:\Users\DELL\Desktop\ReportApp\data\apex_downloads\Update Ryan 050825_6443565.csv
+Membuka Excel...
+
+Membuka file: 2. Query Update Status Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 2. Query Update Status.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Generali.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report KALOG.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report LSIN.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Membuka file: 3. Query Report Smartfren.xlsx
+Merefresh semua koneksi data...
+Menunggu query selesai...
+Refresh selesai dan file disimpan.
+
+Semua file telah diproses.
+
+=== TASK TABLE TRACKER ===
+Task                 Preprocess Request    Download   Praprocess
+Open Danamon         True       True       True       True      
+Open Generali        True       True       True       True      
+Open Kalog           True       True       True       True      
+Open LSIN            True       True       True       True      
+Open Smartfren       True       True       True       True      
+RT Danamon           True       True       True       True      
+New Danamon 81635700 False      True       True       False     
+New Danamon 81635701 False      True       False      False     
+New Kalog            False      True       False      True      
+New LSIN             False      True       False      True      
+New Smartfren 10528201 False      True       False      True      
+New Smartfren 80029200 False      True       True       True      
+New Smartfren 80044400 False      True       False      True      
+New Smartfren 80044800 False      True       False      True      
+New Smartfren 80044801 False      True       False      True      
+New Smartfren 80055900 False      True       True       True      
+New Smartfren 80539301 False      True       False      True      
+New Smartfren 80539308 False      True       True       True      
+Tracker summary disimpan ke: data/tracker\tracker_summary.csv
+Semua proses selesai.
