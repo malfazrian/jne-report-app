@@ -1,5 +1,7 @@
 # main.py 
 import sys
+import traceback
+from datetime import datetime
 from workflows.logger import DualLogger
 from workflows.ops import get_task_paths
 from workflows.file_ops import backup_open_awb_files, clear_folder_of_csvs, merge_csv_files, refresh_excel_workbooks
@@ -119,4 +121,10 @@ def main():
     print("Semua proses selesai.")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        log_file = "error_log.txt"
+        with open(log_file, "a", encoding="utf-8") as f:
+            f.write(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Terjadi error:\n")
+            traceback.print_exc(file=f)

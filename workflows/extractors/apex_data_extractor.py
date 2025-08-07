@@ -227,6 +227,23 @@ def click_report_status_awb(driver, timeout=10):
         print(f"Gagal klik tombol 'Report Status AWB': {e}")
         raise
 
+def click_history_button(driver, retries=5):
+    for attempt in range(retries):
+        try:
+            btn = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.ID, "B49871477158701971"))
+            )
+            btn.click()
+            return
+        except StaleElementReferenceException:
+            print(f"[!] Elemen stale, refresh dan coba lagi... (Percobaan {attempt+1})")
+            driver.refresh()
+            time.sleep(3)
+        except Exception as e:
+            print(f"[!] Gagal klik tombol History (Percobaan {attempt+1}): {e}")
+            time.sleep(2)
+    raise Exception("Gagal klik tombol History setelah beberapa kali percobaan.")
+
 def retry_request(func, max_retries=3, delay=5, **kwargs):
     """
     Fungsi pembungkus untuk retry request hingga max_retries kali jika gagal.
@@ -275,13 +292,6 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
     for host in apex_hosts:
         # ⛔ Skip host jika semua customer sudah selesai
         combined_tasks = open_awb_tasks + new_awb_tasks + rt_awb_tasks + list_customer_ids
-
-        if all_customers_done(combined_tasks, tracker):
-            print("✅ Semua task dari keempat list sudah selesai.")
-            success = True
-            break
-        else:
-            pass
 
         print(f"Mencoba koneksi ke APEX host: {host}")
         apex_url_upload = f"http://{host}:7777/apex/f?p=105:45:::NO::P45_PARAM_TYPE:A"
@@ -342,13 +352,7 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
                     except Exception as e:
                         print(f"Request gagal {customer_id} ({start}-{end}): {e}")
 
-            try:
-                btn = WebDriverWait(driver, 10).until(
-                    EC.element_to_be_clickable((By.ID, "B49871477158701971"))
-                )
-                btn.click()
-            except Exception as e:
-                print(f"[!] Gagal klik tombol History: {e}")
+            click_history_button(driver)
 
             for customer_id, start_fmt, end_fmt, nama_customer in request_info:
                 # ❶ Skip jika sudah sukses
@@ -415,6 +419,10 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
                         # ❺ Error selain itu → keluar, anggap gagal
                         print(f"Download gagal untuk {customer_id}: {err}")
                         break
+                
+                if all_customers_done(combined_tasks, tracker):
+                    print("✅ Semua task dari keempat list sudah selesai.")
+                    return True
 
         except Exception as e:
             print(f"Error di host {host}: {e}")
