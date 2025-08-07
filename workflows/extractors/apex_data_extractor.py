@@ -1,5 +1,6 @@
 import os
 import time
+from dotenv import load_dotenv
 from datetime import datetime, timedelta
 from urllib.parse import unquote
 from selenium import webdriver
@@ -9,11 +10,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 from pathlib import Path
-from workflows.tracker import TaskTableTracker
 
-apex_hosts = ["10.18.2.35", "10.18.2.16", "10.18.2.12", "10.18.2.11"]
-username = "ccc.support4@jne.co.id"
-password = "123"
+load_dotenv()
+
+username = os.getenv("USERNAME")
+password = os.getenv("PASSWORD")
+apex_hosts = os.getenv("APEX_HOSTS").split(",")
 success = False
 
 def start_driver(download_dir: str):

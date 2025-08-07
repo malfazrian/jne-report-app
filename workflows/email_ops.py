@@ -10,8 +10,10 @@ from email.utils import parsedate_to_datetime
 from datetime import datetime
 from bs4 import BeautifulSoup
 from typing import Optional
-from zipfile import BadZipFile
 from workflows.file_ops import extract_archive_with_password
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def buka_thunderbird():
     subprocess.Popen(["C:\\Program Files\\Mozilla Thunderbird Beta\\thunderbird.exe"])
@@ -170,6 +172,7 @@ def save_attachments(msg, save_dir="attachments"):
         print(f"Total attachment disimpan: {count}")
 
 def save_attachments_danamon(msg, save_dir="attachments"):
+    PASSWORD_DANAMON = os.getenv("PASSWORD_DANAMON")
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
 
@@ -182,7 +185,7 @@ def save_attachments_danamon(msg, save_dir="attachments"):
     match = re.search(r"(\d{2})[/-]\d{2}[/-]\d{2}", subject)
     if match:
         dd = match.group(1)
-        password = f"danamon{dd}"
+        password = f"{PASSWORD_DANAMON}{dd}"
     else:
         # --- 2. Coba format nama bulan Indonesia: 14 JULI 2025
         match_bulan = re.search(r"(\d{1,2})\s+([A-Z]+)\s+(\d{4})", subject.upper())
@@ -192,10 +195,10 @@ def save_attachments_danamon(msg, save_dir="attachments"):
             "OKTOBER": 10, "NOVEMBER": 11, "DESEMBER": 12
         }
         if match_bulan:
-            dd = match_bulan.group(1).zfill(2)  # Pastikan 2 digit
+            dd = match_bulan.group(1).zfill(2)
             bulan_nama = match_bulan.group(2)
             if bulan_nama in bulan_mapping:
-                password = f"danamon{dd}"
+                password = f"{PASSWORD_DANAMON}{dd}"
             else:
                 print("Nama bulan tidak dikenali:", bulan_nama)
 
