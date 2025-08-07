@@ -18,6 +18,7 @@ Aplikasi ini digunakan untuk mengelola, mengekstrak, menggabungkan, mengunggah, 
   - pandas
   - selenium
   - openpyxl
+  - python-dotenv
 
 ### Cara Install Requirement
 
