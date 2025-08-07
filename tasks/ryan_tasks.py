@@ -47,6 +47,16 @@ open_awb_tasks = [
             "quote_awb": True,
             "process_all_sheets": True
         },
+        {
+            "desc": "Open BCA Logistik",
+            "input_path": r"D:\RYAN\3. Reports\BCA Logistik",
+            "output_path": r"c:/Users/DELL/Desktop/ReportApp/data/Open AWB BCA Logistik.csv",
+            "file_type": "excel",
+            "status_column": "STATUS PENGIRIMAN",
+            "awb_column": "AWB",
+            "exclude_statuses": ["SUCCESS", "RETURN SHIPPER", "DELIVERED"],
+            "process_all_sheets": True
+        }
 ]
 
 new_awb_tasks = [
@@ -126,6 +136,11 @@ list_customer_ids = [
         "customer_id": "80539308",
         "nama_customer": "New Smartfren 80539308",
         "include_today": False,
+    },
+    {
+        "customer_id": "80731300",
+        "nama_customer": "New BCA Logistik",
+        "include_today": True,
     }
 ]
 

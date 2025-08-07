@@ -188,6 +188,33 @@ def get_report_pickup_filename_from_pickup_date(pickup_date: str) -> str:
         print("Gagal parsing tanggal pickup.")
         return None
     
+def update_submitted_report():
+    """
+    Update file CSV dengan data dari Excel.
+    Mengambil data dari kolom pertama tanpa header, lalu menambahkan tanggal sekarang.
+    """
+    # File dan sheet sumber
+    excel_file = r"D:\RYAN\2. Queries\Query Danamon.xlsx"
+    sheet_name = "REPORT SUKSES KK"
+
+    # File tujuan CSV
+    csv_file = r"D:\RYAN\1. References\Danamon\Submitted Report Sukses.csv"
+
+    # Ambil data dari kolom pertama tanpa header (skiprows=1 untuk melewati header)
+    data = pd.read_excel(excel_file, sheet_name=sheet_name, usecols=[0], skiprows=1, header=None)
+
+    # Ambil hanya baris dengan data (hapus NaN)
+    data = data.dropna()
+
+    # Tambahkan kolom tanggal sekarang dalam format 8/6/2025 (tanpa nol di awal)
+    today_str = datetime.now().strftime('%#d/%#m/%Y')
+    data['Tanggal'] = today_str
+
+    # Simpan / append ke file CSV
+    data.to_csv(csv_file, mode='a', index=False, header=False)
+
+    print("Data report sukses berhasil ditambahkan ke file Update Submitted.")
+    
 def process_danamon_report(tracker, task_paths):
     print("=== Mulai Proses Praprocess Laporan Danamon dari hasil APEX ===")
 

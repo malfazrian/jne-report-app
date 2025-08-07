@@ -74,7 +74,3 @@ ReportApp/
 - Pastikan semua path di file task sudah benar dan file sumber tersedia.
 - Jika ingin menambah/mengubah task, edit file `tasks/ryan_tasks.py`.
 - Untuk troubleshooting Selenium/ChromeDriver, cek error di terminal.
-
----
-
-**Selamat
