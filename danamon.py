@@ -7,7 +7,7 @@ from workflows.extractors.open_awb_extractor import run_open_awb_extraction
 from workflows.extractors.apex_data_extractor import process_apex_upload_and_request
 from workflows.file_ops import backup_open_awb_files, clear_folder_of_csvs, merge_csv_files, refresh_excel_workbooks
 from workflows.data_ops import remove_duplicates_by_column, remove_columns_from_file
-from workflows.danamon_ops import convert_to_fixed_width
+from workflows.danamon_ops import convert_to_fixed_width, update_submitted_report
 from workflows.whatsapp_ops import send_all_files
 from workflows.tracker import TaskTableTracker
 from tasks.danamon_tasks import apex_config, open_awb_tasks, new_awb_tasks, rt_awb_tasks, list_customer_ids
@@ -88,6 +88,9 @@ def main(tracker, task_paths):
         output_dir="d:\\RYAN\\3. Reports\\Danamon\\Report Sukses",
         sheet_name="REPORT SUKSES KK"
     )
+
+    if sukses_path:
+        update_submitted_report()
 
     report_list = [
         {

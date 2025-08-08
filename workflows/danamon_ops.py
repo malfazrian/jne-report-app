@@ -273,6 +273,7 @@ def process_danamon_report(tracker, task_paths):
     pickup_path = None
     os_path = None
     pu_filename = None
+    sukses_path = None
 
     print("Membuka Thunderbird dan menyegarkan inbox...")
     buka_thunderbird()
@@ -320,6 +321,9 @@ def process_danamon_report(tracker, task_paths):
         output_dir="d:\\RYAN\\3. Reports\\Danamon\\Report Sukses",
         sheet_name="REPORT SUKSES KK"
     )
+
+    if sukses_path:
+        update_submitted_report()
 
     report_list = [
         {

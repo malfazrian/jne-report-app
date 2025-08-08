@@ -232,17 +232,15 @@ def click_report_status_awb(driver, timeout=10):
 def click_history_button(driver, retries=5):
     for attempt in range(retries):
         try:
-            btn = WebDriverWait(driver, 10).until(
+            btn = WebDriverWait(driver, 600).until(
                 EC.element_to_be_clickable((By.ID, "B49871477158701971"))
             )
             btn.click()
             return
         except StaleElementReferenceException:
-            print(f"[!] Elemen stale, refresh dan coba lagi... (Percobaan {attempt+1})")
             driver.refresh()
             time.sleep(3)
         except Exception as e:
-            print(f"[!] Gagal klik tombol History (Percobaan {attempt+1}): {e}")
             time.sleep(2)
     raise Exception("Gagal klik tombol History setelah beberapa kali percobaan.")
 
@@ -318,8 +316,8 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
                 upload_file(driver, file_path, file_name)
                 for task in open_awb_tasks + new_awb_tasks + rt_awb_tasks:
                     tracker.set_request(task["desc"], True)
-                driver.find_element(By.ID, "B49871477158701971").click()
-                time.sleep(2)
+                
+                click_history_button(driver)
 
                 downloaded_filename = click_download_link(driver, file_prefix=file_name)
                 downloaded_open_file = wait_for_download(download_dir, base_file_name, target_filename=downloaded_filename)
@@ -421,7 +419,7 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
                         # ❺ Error selain itu → keluar, anggap gagal
                         print(f"Download gagal untuk {customer_id}: {err}")
                         break
-                
+                tracker.summary(print_summary=False)
                 if all_customers_done(combined_tasks, tracker):
                     print("✅ Semua task dari keempat list sudah selesai.")
                     return True
