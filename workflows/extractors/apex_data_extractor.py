@@ -11,7 +11,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 from pathlib import Path
 
-load_dotenv()
+project_root = Path(__file__).resolve().parents[2]  # Folder ReportApp
+env_path = project_root / ".env"
+
+if env_path.exists():
+    load_dotenv(dotenv_path=env_path, override=True)
+else:
+    raise FileNotFoundError(f"❌ File .env tidak ditemukan di {env_path}")
 
 username = os.getenv("USERNAME")
 password = os.getenv("PASSWORD")
