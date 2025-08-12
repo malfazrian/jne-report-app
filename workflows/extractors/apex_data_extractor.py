@@ -34,7 +34,7 @@ def start_driver(download_dir: str):
     options.add_experimental_option("prefs", prefs)
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     options.add_argument("--log-level=3")
-    options.add_argument("--headless")
+    options.add_argument("--headless")  # Jalankan di background
     return webdriver.Chrome(options=options)
 
 def login_to_apex(driver, url, username, password):
@@ -299,6 +299,12 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
         # ⛔ Skip host jika semua customer sudah selesai
         combined_tasks = open_awb_tasks + new_awb_tasks + rt_awb_tasks + list_customer_ids
 
+        # 🚀 Cek sebelum mulai host
+        if all_customers_done(combined_tasks, tracker):
+            print("Semua task sudah selesai sebelum masuk host:", host)
+            success = True
+            break
+
         print(f"Mencoba koneksi ke APEX host: {host}")
         apex_url_upload = f"http://{host}:7777/apex/f?p=105:45:::NO::P45_PARAM_TYPE:A"
         apex_url_request = f"http://{host}:7777/apex/f?p=105:45:::NO::P45_PARAM_TYPE:P"
@@ -308,14 +314,14 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
 
         try:
             # Cek apakah SEMUA task open_awb/new_awb/rt_awb sudah pernah download
-            all_done = True
+            success = True
             for task in open_awb_tasks + new_awb_tasks + rt_awb_tasks:
                 tracker_row = next((row for row in tracker.rows if str(row["task"]) == str(task["desc"])), None)
                 if not tracker_row or not tracker_row.get("download"):
-                    all_done = False
+                    success = False
                     break
 
-            if all_done:
+            if success:
                 print("Semua file open_awb/new_awb/rt_awb sudah pernah didownload, skip upload & download.")
             else:
                 login_to_apex(driver, apex_url_upload, username, password)
@@ -382,7 +388,7 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
 
                         # None artinya: No Data → skip akun
                         if filename is None:
-                            tracker.set_download(nama_customer, False)
+                            tracker.set_download(nama_customer, "Skip")
                             tracker.set_path(nama_customer, "no_data")
                             break
 
@@ -425,10 +431,13 @@ def process_apex_upload_and_request(file_name, base_file_name, file_path, downlo
                         # ❺ Error selain itu → keluar, anggap gagal
                         print(f"Download gagal untuk {customer_id}: {err}")
                         break
+
                 tracker.summary(print_summary=False)
+                # 🚀 Cek lagi setelah semua proses di host
                 if all_customers_done(combined_tasks, tracker):
-                    print("✅ Semua task dari keempat list sudah selesai.")
-                    return True
+                    print("Semua task sudah selesai di host:", host)
+                    success = True
+                    break
 
         except Exception as e:
             print(f"Error di host {host}: {e}")
