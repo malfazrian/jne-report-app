@@ -23,17 +23,17 @@ def buka_thunderbird():
 def refresh_inbox(mbox_path, timeout=300):
     last_mtime = os.path.getmtime(mbox_path)
     pyautogui.press('f5')
-    print("Memulai proses refresh...")
+    print("Memulai proses refresh inbox...")
 
     start_time = time.time()
     while True:
         time.sleep(2)
         new_mtime = os.path.getmtime(mbox_path)
         if new_mtime != last_mtime:
-            print("Refresh selesai.")
+            print("Refresh inbox selesai.")
             break
         if time.time() - start_time > timeout:
-            print("Batas waktu 5 menit tercapai, proses menunggu refresh dihentikan..")
+            print("Batas waktu 5 menit tercapai, proses menunggu refresh inbox dihentikan..")
             break
 
 def parse_custom_date(date_str):

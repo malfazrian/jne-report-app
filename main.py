@@ -53,6 +53,7 @@ def main():
         new_awb_tasks=new_awb_tasks,
         rt_awb_tasks=rt_awb_tasks
     )
+    success = True
     if success:
         print("Proses upload dan unduh APEX berhasil.")
 
@@ -96,6 +97,7 @@ def main():
             sheet_name="Sheet1",
             )
             refresh_excel_workbooks([
+                "d:\\RYAN\\2. Queries\\1. Data Apex Mentah.xlsx",
                 "d:\\RYAN\\2. Queries\\2. Query Update Status Generali.xlsx",
                 "d:\\RYAN\\2. Queries\\2. Query Update Status.xlsx",
                 "d:\\RYAN\\2. Queries\\3. Query Report Generali.xlsx",

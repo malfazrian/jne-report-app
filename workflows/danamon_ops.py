@@ -277,7 +277,7 @@ def process_danamon_report(tracker, task_paths):
 
     print("Membuka Thunderbird dan menyegarkan inbox...")
     buka_thunderbird()
-    refresh_inbox("D:/email/Email TB/outlook.office365.com/Inbox.sbd/DANAMON", timeout=10*60)
+    refresh_inbox("D:/email/Email TB/outlook.office365.com/Inbox.sbd/DANAMON")
 
     print("Mencari email dengan subjek 'OS CARD JNE'...")
     email_os = find_latest_matching_email(

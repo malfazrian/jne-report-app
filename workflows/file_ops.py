@@ -6,6 +6,9 @@ import pyzipper
 import py7zr
 import win32com.client
 import time
+import gc
+import pythoncom
+from win32com.client import Dispatch
 from datetime import datetime
 from pathlib import Path
 from pywintypes import com_error
@@ -172,16 +175,15 @@ def wait_for_query_refresh(wb):
                 except AttributeError:
                     continue
         except com_error as e:
-            if e.hresult == -2147418111:  # Call was rejected by callee
-                print("Excel sedang sibuk... tunggu sebentar.")
-                time.sleep(2)
+            if e.hresult in (-2147418111, -2147023170):  # busy atau RPC gagal
+                print("⚠️ Excel sibuk / RPC gagal, retry loop...")
+                time.sleep(3)
                 continue
             else:
                 raise
 
         if not refreshing:
             break
-
         time.sleep(2)
 
 def close_all_excel_instances():
@@ -196,19 +198,7 @@ def close_all_excel_instances():
     except Exception as e:
         print("Terjadi error:", e)
 
-def refresh_excel_workbooks(target: Union[str, Path, List[Union[str, Path]]]):
-
-    """
-    Refresh semua koneksi dalam satu atau banyak file Excel (.xlsx).
-
-    Args:
-        target (str | Path | List[str | Path]):
-            - Path ke folder (semua .xlsx di-refresh)
-            - Atau list path file Excel
-
-    Returns:
-        None
-    """
+def refresh_excel_workbooks(target, max_retries=5):
     if isinstance(target, (str, Path)):
         target = Path(target)
         if target.is_dir():
@@ -226,28 +216,49 @@ def refresh_excel_workbooks(target: Union[str, Path, List[Union[str, Path]]]):
         print("Tidak ada file Excel ditemukan untuk diproses.")
         return
     
+    # Tutup Excel sebelum memulai batch
     close_all_excel_instances()
+    time.sleep(2)
 
-    print("Membuka Excel...")
-    excel = win32com.client.Dispatch("Excel.Application")
+    for excel_file in file_list:
+        retries = 0
+        while retries < max_retries:
+            excel = None
+            try:
+                pythoncom.CoInitialize()  # pastikan COM siap
+                print(f"\n[{retries+1}/{max_retries}] Membuka Excel untuk: {excel_file.name}")
+                excel = Dispatch("Excel.Application")
+                excel.Visible = False
 
-    try:
-        for excel_file in file_list:
-            print(f"\nMembuka file: {excel_file.name}")
-            wb = excel.Workbooks.Open(str(excel_file))
+                wb = excel.Workbooks.Open(str(excel_file))
+                print("Merefresh semua koneksi data...")
+                wb.RefreshAll()
+                wait_for_query_refresh(wb)
 
-            print("Merefresh semua koneksi data...")
-            wb.RefreshAll()
+                time.sleep(2)  # beri waktu commit data
+                wb.Save()
+                wb.Close(SaveChanges=True)
+                print("✅ Refresh selesai dan file disimpan.")
+                break
 
-            wait_for_query_refresh(wb)
+            except com_error as e:
+                print(f"⚠️ COM Error: {e}")
+                retries += 1
+                time.sleep(5)
 
-            wb.Save()
-            wb.Close(SaveChanges=True)
-            print("Refresh selesai dan file disimpan.")
+            except Exception as e:
+                print(f"❌ Error lain: {e}")
+                retries += 1
+                time.sleep(5)
 
-    except Exception as e:
-        print(f"Terjadi kesalahan: {e}")
+            finally:
+                if excel:
+                    try:
+                        excel.Quit()
+                    except:
+                        pass
+                gc.collect()
+                pythoncom.CoUninitialize()
 
-    finally:
-        excel.Quit()
-        print("\nSemua file telah diproses.")
+        else:
+            print(f"❌ Gagal memproses {excel_file.name} setelah {max_retries} percobaan.")

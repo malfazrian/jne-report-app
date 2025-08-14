@@ -54,7 +54,7 @@ open_awb_tasks = [
             "file_type": "excel",
             "status_column": "STATUS PENGIRIMAN",
             "awb_column": "AWB",
-            "exclude_statuses": ["SUCCESS", "RETURN SHIPPER", "DELIVERED"],
+            "exclude_statuses": ["SUCCESS", "RETURN SHIPPER", "RU ORIGIN", "MISSING"],
             "process_all_sheets": True
         }
 ]
