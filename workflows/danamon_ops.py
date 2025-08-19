@@ -327,7 +327,7 @@ def process_danamon_report(tracker, task_paths):
 
     report_list = [
         {
-            'contact': 'Zaini',
+            'contact': 'Yusan Sefianto',
             'files': [f for f in [r'D:\RYAN\3. Reports\Danamon\Raw Report.csv', pickup_path, os_path, sukses_path] if f and os.path.exists(f)]
         }
     ]

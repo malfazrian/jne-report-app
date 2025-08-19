@@ -62,11 +62,12 @@ def extract_open_awb(
             if df.empty:
                 print("Data kosong, melewati...")
                 continue
-
+            
             # Normalisasi nama kolom
             df.columns = df.columns.str.strip().str.upper()
             awb_col = awb_column.upper()
             status_col = status_column.upper()
+            print("Unique STATUS values:", df[status_col].unique()[:50])
 
             if {awb_col, status_col}.issubset(df.columns):
                 df[status_col] = df[status_col].astype(str).str.strip().str.upper()

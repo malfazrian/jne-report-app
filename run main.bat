@@ -1,2 +1,3 @@
 @echo off
-start "" /min "C:\Users\DELL\AppData\Local\Programs\Python\Python313\python.exe" "%~dp0main.py"
+cd /d "%~dp0"
+start "" /min "C:\Users\DELL\AppData\Local\Programs\Python\Python313\pythonw.exe" main.py
